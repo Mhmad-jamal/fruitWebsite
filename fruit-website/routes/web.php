@@ -22,15 +22,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['CheckRole:admin'])->group(function () {
-    
-    Route::get('/test', function () {
-        return view('test');
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
     });
 });
 
 Route::middleware(['CheckRole:' . 'admin' . '!' . 'user'])->group(function () {
-  
 });
-
-
-
