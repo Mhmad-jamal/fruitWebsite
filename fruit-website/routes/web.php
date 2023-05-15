@@ -24,7 +24,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::middleware(['CheckRole:admin'])->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
-    });
+    })->name('dashboard');
 });
 
 Route::middleware(['CheckRole:' . 'admin' . '!' . 'user'])->group(function () {
