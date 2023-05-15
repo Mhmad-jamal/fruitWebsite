@@ -24,9 +24,11 @@ class LoginController extends Controller
      */
     protected function redirectTo()
     {
+       
         // Check if user is an admin
         if (auth()->user()->role == 'admin') {
             return route('dashboard');
+            
         }
 
         return $this->redirectTo;
