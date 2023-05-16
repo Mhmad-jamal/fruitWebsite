@@ -1,0 +1,117 @@
+@media only screen and (min-width: 768px) {
+    /* Styles for web (devices with a minimum width of 768px) */
+    #navbarText{
+        padding-left: 525px;
+    }
+    .navbar{
+        height: 200px;
+    }
+  .nav-link{
+    font-family: "Montserrat";
+font-size: 23px;
+font-weight: 500;
+font-style: normal;
+text-align: left;
+color: #8c7ad4!important;
+  }
+  .loginBtn{
+    border-color: #8b48e5;
+border-width: 1px;
+border-style: solid;
+border-radius: 20px;
+height: 48px;
+width: 180px;
+
+font-family: "Montserrat";
+font-size: 28px;
+font-weight: 500;
+line-height: 31px;
+font-style: normal;
+text-align: center;
+color: #ffffff;
+background: #8b48e5
+  }
+  #LoginSpan{
+    padding-right: 100px;
+  }
+  #Logo{
+    padding-left: 50px;
+  }
+  }
+
+  /* footer Css */
+
+  .custom-p,.custom-title{
+    font-family: "Montserrat";
+font-size: 24px;
+font-weight: normal;
+font-style: normal;
+text-align: left;
+color: #8b48e5!important;
+text-decoration: none;
+  }
+  .custom-title{
+    font-size: 30px;
+
+  }
+  #navbarDropdown{
+    color:white!important;
+  }
+  #cutsome-drop-douwn >a{
+    color: white!important;
+
+  }
+  #cutsome-drop-douwn >a:hover{
+    color: rgb(0, 0, 0)!important;
+
+  }
+  :root{
+    --wav1:url('https://i.postimg.cc/43KhFcRw/wave.png');
+    }
+    body.dark{
+    --wav1:url('https://i.postimg.cc/FRBCX3YR/wave2.png')
+      ;
+    }					
+    *{margin: 0;padding: 0;}
+    .waves{
+      position:relative;
+      background:#F0FFD8;
+      height: 50vh;
+      width: 100%;
+    }					
+    .waves .wave{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: var(--wav1);
+      background-size: 1000px 100px;
+    }               
+    .waves .wave.wave1{
+      animation: animate 5s linear infinite;
+      opacity: .7;
+        animation-delay: 1s;
+    }
+    .waves .wave.wave2{
+      animation: animate 2s linear infinite;
+      opacity: .6;
+      animation-delay: 5s;
+    }
+    .waves .wave.wave3{
+      animation: animate 2s linear infinite;
+      opacity: 1;
+      animation-delay: 0s;
+    }
+    @keyframes animate {
+      0%{
+        background-position-x: 0;
+      }
+      100%{
+        background-position-x: 1000px;
+      }
+    }
+    .dark-toggle{position: absolute; z-index: 1000; transform:translate(50%, 50%); border: 1px solid white; background: black; padding: 2px 5px; transition: all 0.5s ease-in-out;}
+    .dark-toggle:hover{border: 1px solid black; padding: 2px 5px; color: black; background-color: white;}
+    a.dark-toggle{color:white; text-decoration:none;}
+    .copyright{position:absolute; top:10px;right:10px; background:red; padding:2px 5px; border-radius:0 8px 0 8px; text-decoration:none; color:white}
