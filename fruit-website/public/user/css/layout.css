@@ -1,0 +1,77 @@
+@media only screen and (min-width: 768px) {
+    /* Styles for web (devices with a minimum width of 768px) */
+    #navbarText{
+        padding-left: 250px;
+    }
+    .navbar{
+        height: 200px;
+    }
+  .nav-link{
+    font-family: "Montserrat";
+font-size: 23px;
+font-weight: 500;
+font-style: normal;
+text-align: left;
+color: #8c7ad4!important;
+  }
+  .loginBtn{
+    border-color: #8b48e5;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 20px;
+    height: 42px;
+    width: 151px;
+
+    font-family: "Montserrat";
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 31px;
+    font-style: normal;
+    text-align: center;
+    color: #8b48e5;
+    background: unset;
+  }
+  .loginBtn:hover{
+    color: white;
+    background-color:#8b48e5 ;
+  }
+  #LoginSpan{
+    padding-right: 100px;
+  }
+  #Logo{
+    padding-left: 50px;
+  }
+  }
+
+  /* footer Css */
+
+  .custom-p,.custom-title{
+    font-family: "Montserrat";
+font-size: .8rem;
+font-weight: normal;
+font-style: normal;
+text-align: left;
+color: #8b48e5!important;
+text-decoration: none;
+text-align: center;
+  }
+  .custom-title{
+      font-size: 1.2rem;
+      text-align: center;
+
+  }
+  #navbarDropdown{
+    color:#8b48e5!important;
+  }
+  #cutsome-drop-douwn >a{
+    color: #8b48e5!important;
+
+  }
+#navbarDropdown:hover{
+    color: white!important;
+  }
+  #cutsome-drop-douwn >a:hover{
+    color: rgb(255, 255, 255)!important;
+
+  }
+ 

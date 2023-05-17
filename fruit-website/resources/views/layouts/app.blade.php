@@ -16,12 +16,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Scripts -->
-    <link rel="stylesheet" href="{{ asset('user/layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('user/css/layout.css') }}">
 </head>
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <nav class="navbar navbar-expand-lg navbar-light  ">
             <div class="container-fluid">
                 <a class="navbar-brand" id="Logo" href="/" id="Logo">Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -158,7 +158,7 @@
             <section class="container-fluid pt-4">
                 <div class="container-fluid text-center text-md-start mt-5">
                     <!-- Grid row -->
-                    <div class="row mt-3">
+                    <div class="row mt-3 text-center">
                         <!-- Grid column -->
                         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <!-- Content -->
