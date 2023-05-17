@@ -9,6 +9,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+@if (Route::has('home'))
+<link rel="stylesheet" href="{{ asset('user/css/home.css') }}">
+
+@endif
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -28,7 +33,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" id="Logo" href="/" id="Logo">
-                    <img src="{{asset('user/main-img/Logo.png')}}" alt="..." height="300">
+                    <img src="{{asset('user/main-img/Logo.png')}}" alt="..." height="250">
 
                 </a>
                 
