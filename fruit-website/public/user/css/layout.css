@@ -1,11 +1,24 @@
 @media only screen and (min-width: 768px) {
     /* Styles for web (devices with a minimum width of 768px) */
     #navbarText{
-        padding-left: 250px;
+        padding-left: 100px;
     }
     .navbar{
         height: 200px;
     }
+ 
+ 
+  .loginBtn:hover{
+    color: white;
+    background-color:#8b48e5 ;
+  }
+  #LoginSpan{
+    padding-right: 100px;
+  }
+  #Logo{
+    padding-left: 50px;
+  }
+  }
   .nav-link{
     font-family: "Montserrat";
 font-size: 23px;
@@ -31,18 +44,6 @@ color: #8c7ad4!important;
     color: #8b48e5;
     background: unset;
   }
-  .loginBtn:hover{
-    color: white;
-    background-color:#8b48e5 ;
-  }
-  #LoginSpan{
-    padding-right: 100px;
-  }
-  #Logo{
-    padding-left: 50px;
-  }
-  }
-
   /* footer Css */
 
   .custom-p,.custom-title{
@@ -62,6 +63,7 @@ text-align: center;
   }
   #navbarDropdown{
     color:#8b48e5!important;
+    padding-bottom: 37px;
   }
   #cutsome-drop-douwn >a{
     color: #8b48e5!important;

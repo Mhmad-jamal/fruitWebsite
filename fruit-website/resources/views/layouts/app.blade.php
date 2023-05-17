@@ -23,11 +23,15 @@
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light  ">
             <div class="container-fluid">
-                <a class="navbar-brand" id="Logo" href="/" id="Logo">Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                <a class="navbar-brand" id="Logo" href="/" id="Logo">
+                    <img src="{{asset('user/main-img/Logo.png')}}" alt="..." height="300">
+
+                </a>
+                
                 <div class="collapse navbar-collapse justify-content-center" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -160,27 +164,31 @@
                     <!-- Grid row -->
                     <div class="row mt-3 text-center">
                         <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 d-flex flex-column justify-content-center align-items-center " style="max-height: 250px;
+                    }">
                             <!-- Content -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="fas fa-gem me-3"></i>Logo
-                            </h6>
-                            <p class="custom-p">
+                            <div class="mb-1"><img src="{{asset('user/main-img/Logo.png')}}" alt="..." height="200">
+                            </div>
+
+
+                            <div class="mb-1">    <p class="custom-p">
                                 Here you can use rows and columns to organize your footer content. Lorem ipsum
                                 dolor sit amet, consectetur adipisicing elit.
                             </p>
-                            <h6 class="text-uppercase fw-bold mb-4">
+                            </div>
+                            <div class="mb-1">  <h6 class="text-uppercase fw-bold mb-4">
                                 <i class="fas fa-gem me-3">Social </i>
                                 <i class="fas fa-gem me-3">Social </i>
 
                                 <i class="fas fa-gem me-3">Social </i>
 
                             </h6>
+                            </div>
                         </div>
                         <!-- Grid column -->
 
                         <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4  pt-5">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold mb-4 custom-title">
                                 About Us
@@ -201,7 +209,7 @@
                         <!-- Grid column -->
 
                         <!-- Grid column -->
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4  pt-5">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold mb-4 custom-title">
                                 Useful links
@@ -225,7 +233,7 @@
                         <!-- Grid column -->
 
                         <!-- Grid column -->
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 pt-5">
                             <!-- Links -->
                             <h6 class="text-uppercase fw-bold mb-4 custom-title">Contact</h6>
                             <p class="custom-p"><i class="fas fa-home me-3 "></i> New York, NY 10012, US</p>
