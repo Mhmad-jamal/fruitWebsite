@@ -4,7 +4,8 @@
         padding-left: 100px;
     }
     .navbar{
-        height: 200px;
+        height: 170px;
+        z-index: 500;
     }
  
  

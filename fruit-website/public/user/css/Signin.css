@@ -1,0 +1,76 @@
+#LoginContainer{
+    padding-bottom: 4rem;
+ height: fit-content;
+width: 50%;
+border-radius: 81px;
+
+filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.16 ));
+
+background: #ffffff
+}
+#Centerdimg{
+    z-index: 5;
+    height: 200px;
+    max-width: 100%;
+    position: absolute;
+    top: 17%;}
+#loginText{
+    padding-top: 100px;
+    padding-left: 10%;
+}
+#loginText >h1{
+    font-family: "Montserrat";
+font-size: 39px;
+font-weight: normal;
+line-height: 43px;
+font-style: normal;
+text-align: left;
+color: #8b48e5;
+}
+#CreateNewAccount{
+    color: #8b48e5;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 43px;
+
+}
+#emailInput,#passwordinput,#password-confirm,#name{
+    width: 90%;
+    height: 50px;
+    opacity: 0.40;
+    border-radius: 20px;
+    background: #ede0ff;
+}
+#submitbtn{
+    padding-right: 50px;
+}
+#submitbtn > button{
+    
+font-family: "Montserrat";
+font-size: 28px;
+font-weight: 500;
+line-height: 31px;
+font-style: normal;
+text-align: center;
+color: #ffffff;
+
+border-radius: 15px;
+
+filter: drop-shadow(0px 4px 4px rgba(0,0,0,0.41 ));
+
+background: #af7bf6;
+width: 150px;
+}
+@media (max-width: 576px) {
+    #LoginContainer{
+        width: 100%;
+    }
+    #customeh5text{
+        font-size: .9rem;
+    }
+    #Centerdimg{
+        top: 20%;
+    }
+  }
+  
