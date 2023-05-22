@@ -74,7 +74,19 @@ border: none;
     text-decoration: none;
     background: linear-gradient(#696484, #8788BA);
   }
+  .customP{
+    font-size: .8rem;
+    }
+    .custom-width{
+      width: 25%!important;
+    }
   @media screen and (max-width: 996px) {
+    .customP{
+    font-size: .5rem;
+    }
+    .custom-width{
+      width: 100%!important;
+    }
     .hero {
        flex-direction: column;
        text-align: center;
@@ -153,3 +165,125 @@ background-color: #d4b5ff!important;
   #CenterImg{
     
   }
+  
+  .CenterFristCol{
+    margin-left: 10%;
+  }
+ /* section 4 */
+ .div-title{
+  font-family: "Montserrat";
+font-size: 35px;
+font-weight: bold;
+line-height: 79px;
+font-style: normal;
+text-align: left;
+color: #8b48e5;
+ }
+ .div-paragraph{
+  font-family: "TrolaW03-LightItalic";
+font-size: 20px;
+font-weight: normal;
+line-height: 27px;
+font-style: normal;
+text-align: left;
+color: #6e6c6b;
+ }
+ .customDivimage{
+  margin-top: 50%;
+ }
+ @media screen and (max-width: 600px) {
+  .div-paragraph{
+    font-size: 15px;
+
+  }
+  .div-title{
+    font-size: 20px;
+    line-height: 1.8rem;
+
+  }
+
+ }
+ /* section 5 */
+
+ .div-secount-title{
+  font-family: "Montserrat";
+font-size: 24px;
+font-weight: normal;
+font-style: normal;
+text-align: left;
+color: #8b48e5;
+ }
+ #Section-5{
+  background-image: url("../main-img/Main-div-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10% 0;
+ }
+ .p-div{
+  padding-left: 10%!important;
+    padding-top: 10%;
+ }
+ #explore-btn{
+  width: 190px;
+  height: 52px;
+  border: none;
+  border-radius: 59px;
+  
+  filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.16 ));
+  
+  background: #d4b5ff
+ }
+ .custome-desctiption-img{
+  font-family: "TrolaW03-LightItalic";
+font-size: 15px;
+font-weight: normal;
+line-height: 27px;
+font-style: normal;
+text-align: left;
+color: #6e6c6b;
+margin-top: 10%;
+ }
+ #KidsImg{
+  width: 63%;
+  
+  margin-top: 36%;
+
+
+ }
+ .ml-3{
+  margin-left: 1rem;
+ }
+ #seciotn-5-row{
+  max-width: 100%;
+ }
+ @media screen and (max-width: 600px) {
+  #seciotn-5-row{
+    padding-top: 40%; 
+  }
+}
+
+#left-img{
+  animation: fadeInLeft 3s ease-in-out;
+
+}
+/*animation fade in right*/
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
