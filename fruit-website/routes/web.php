@@ -25,6 +25,9 @@ Route::middleware(['CheckRole:admin'])->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
+    Route::get('/categories/add', function () {
+        return view('admin.Categories.Add_Categories');
+        })->name('categories.add');
 });
 
 Route::middleware(['CheckRole:' . 'admin' . '!' . 'user'])->group(function () {
