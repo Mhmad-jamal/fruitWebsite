@@ -166,40 +166,37 @@
 
     </section>
 <section class="container">
-<div class="row">
+<div class="row mb-3">
   <div class="col-12  text-center div-title">Article Section</div>
 </div>
 
-<div class="row">
-  <div class="col  d-flex justify-content-center">
-    <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;">
+<div class="row mt-3">
+  <div class="col  d-flex justify-content-center" id="articleSection">
+    <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;" id="LeftArticleCard">
       <div class="inline-elements d-flex justify-content-beteween" id="Removed-flex-in-mobile">
-        <h5>Card title</h5>
+        <h5>Article</h5>
         <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
       </div>
           <div class="card-body">
-      <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <button href="#" class="btn card-btn">Go somewhere</button>
+      <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content.</p>
     </div>
   </div>
-  <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;">
+  <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
    
-<div class="inline-elements d-flex justify-content-beteween">
-  <h5>Card title</h5>
+<div class="inline-elements d-flex justify-content-beteween" >
+  <h5>Article</h5>
   <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
 </div>
     <div class="card-body">
-      <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <button href="#" class="btn card-btn">Go somewhere</button>
+      <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content Some quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the card.</p>
     </div>
   </div>
-  <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;">
+  <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;" id="RightArticleCard">
     <div class="inline-elements d-flex justify-content-beteween">
-      <h5>Card title</h5>
+      <h5>Article</h5>
       <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
     </div>    <div class="card-body">
-      <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <button href="#" class="btn card-btn">Go somewhere</button>
+      <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content.</p>
     </div>
   </div>
 </div>

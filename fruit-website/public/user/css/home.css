@@ -299,13 +299,30 @@ width: 60%;
 transform: translateY(-20%);
 
   }
+  #LeftArticleCard{
+    transform: rotate(-45deg);
+    opacity: 0.60;}
+  
+    #RightArticleCard{
+      transform: rotate(45deg);
+  opacity: 0.60;
+    }
+    #CenterdArticleCard{
+      z-index: 555;
+    }
   
 }
 @media screen and (max-width: 600px) {
 
- .inline-elements{
-  display: inline!important; }
+ #articleSection{
+  display: inline!important;
+  padding-left: 10%;}
+  #CenterdArticleCard{
+    z-index: 555;
+    width: 18rem!important;
+  }
 }
+
 .articleCard{
   border-radius: 47px!important;
 
@@ -321,4 +338,15 @@ background: #ede0ff!important;
   font-style: normal;
   text-align: center;
   color: #8b48e5;
+}
+.articleP{
+  font-family: "TrolaW03-LightItalic";
+font-size: 24px;
+font-weight: normal;
+font-style: normal;
+text-align: left;
+color: #000000;
+
+line-height: 1.8rem;
+
 }
