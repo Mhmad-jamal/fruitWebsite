@@ -201,7 +201,7 @@
   
     }
     .div-title{
-      font-size: 18px;
+      font-size: 25px;
       line-height: 1.8rem;
   
     }
@@ -299,6 +299,7 @@ width: 60%;
 transform: translateY(-20%);
 
   }
+  
   #LeftArticleCard{
     transform: rotate(-45deg);
     opacity: 0.60;}
@@ -312,8 +313,14 @@ transform: translateY(-20%);
     }
   
 }
+.card-img-top-Article{
+  transform: translateY(-20%);
+  
+    }
 @media screen and (max-width: 600px) {
-
+.card-img-top-Article{
+  width: 70%;
+}
  #articleSection{
   display: inline!important;
   padding-left: 10%;}
