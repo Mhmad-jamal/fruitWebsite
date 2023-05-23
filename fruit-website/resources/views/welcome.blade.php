@@ -55,9 +55,7 @@
                 <div class="d-flex justify-content-end  flex-column "> <img class="img-fluid custom-width mx-auto" id=""
                         src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
                         <h2 class="text-center">title</h2>
-                    <p class="text-justify customP ">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
-                        fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex
-                        communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in
+                    <p class="text-justify customP text-center ">
                         diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 
                 </div>
@@ -65,9 +63,7 @@
                         src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
                         <h2 class="text-center">title</h2>
 
-                    <p class="text-justify customP ">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
-                        fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex
-                        communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in
+                    <p class="text-justify customP text-center">
                         diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 
                 </div>
@@ -76,9 +72,7 @@
                     <img class="img-fluid custom-width mx-auto" src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
                     <h2 class="text-center">title</h2>
 
-                    <p class="text-justify customP">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
-                        fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex
-                        communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in
+                    <p class="text-justify customP text-center">
                         diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 
                 </div>
@@ -91,23 +85,19 @@
 
             </div>
             <div class="col-4 d-flex justify-content-center flex-column ">
-                <div class=" d-flex justify-content-end flex-column CenterFristCol "> 
+                <div class=" d-flex justify-content-end flex-column  "> 
                     <img class="img-fluid custom-width mx-auto" src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
                     <h2 class="text-center">title</h2>
 
-                    <p class="text-justify customP">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
-                        fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex
-                        communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in
+                    <p class="text-justify customP text-center">
                         diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 
                 </div>
-                <div class=" d-flex justify-content-end flex-column "> 
+                <div class=" d-flex justify-content-end flex-column  CenterFristCol-right"> 
                     <img class="img-fluid custom-width mx-auto" src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
                     <h2 class="text-center">title</h2>
 
-                    <p class="text-justify customP">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
-                        fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex
-                        communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in
+                    <p class="text-justify customP text-center">
                         diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
 
                 </div>
@@ -116,10 +106,8 @@
                     <img class="img-fluid custom-width mx-auto" src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
                     <h2 class="text-center">title</h2>
 
-                    <p class="text-justify customP">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
-                        fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex
-                        communi. At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in
-                        diem certam indicere. Cras mattis iudicium purus sit amet fermentum.</p>
+                    <p class="text-justify customP text-center">Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet
+                  </p>
 
                 </div>
             </div>
@@ -177,6 +165,45 @@
         </div>
 
     </section>
+<section class="container">
+<div class="row">
+  <div class="col-12  text-center div-title">Article Section</div>
+</div>
 
+<div class="row">
+  <div class="col  d-flex justify-content-center">
+    <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;">
+      <div class="inline-elements d-flex justify-content-beteween" id="Removed-flex-in-mobile">
+        <h5>Card title</h5>
+        <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+      </div>
+          <div class="card-body">
+      <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button href="#" class="btn card-btn">Go somewhere</button>
+    </div>
+  </div>
+  <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;">
+   
+<div class="inline-elements d-flex justify-content-beteween">
+  <h5>Card title</h5>
+  <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+</div>
+    <div class="card-body">
+      <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button href="#" class="btn card-btn">Go somewhere</button>
+    </div>
+  </div>
+  <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;">
+    <div class="inline-elements d-flex justify-content-beteween">
+      <h5>Card title</h5>
+      <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+    </div>    <div class="card-body">
+      <p class="card-text text-center">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <button href="#" class="btn card-btn">Go somewhere</button>
+    </div>
+  </div>
+</div>
+</div>
+</section>
 
 @endsection

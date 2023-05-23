@@ -1,289 +1,324 @@
 
 
 
-  #Main-title{
+#Main-title{
 
-font-family: "DIN Round Pro";
-font-size: 60px;
-font-weight: 500;
-line-height: 79px;
-font-style: normal;
-text-align: left;
-color: #8b48e5;
-padding-left: 50px;
-  }
-  #left-img{
-    margin-right: 70px;
-    max-width: 48%;
-  }
-  #Main-title span{
-    font-weight: bold;
-  }
-  .hero {
-    padding-bottom: 140px;
-    padding-top: 70px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin: auto;
-    background-image: url('../main-img/Main-div-bg.png');
-    background-repeat: no-repeat;
-  }
-  #TextDiv {
-    padding-top: 0;
-    margin-top: 50px;
-  }
-  #orderbtn{
-    /* Rectangle 7 */
-
-width: 310px;
-height: 85px;
-
-border-radius: 59px;
-
-filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.16 ));
-
-background: #d4b5ff;
-border: none;
-
-  }
-  h1 {
-    color: #A5B4FC;
-    font-size: 3em;
-    padding-bottom: 25px;
-  }
-  #TextDivP {
-    font-family: "TrolaW03-LightItalic";
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 27px;
-    font-style: normal;
-    text-align: left;
-    color: #6e6c6b;
-  }
-
- 
-  .cta {
-    color: white;
-    background: linear-gradient(#8E86B5, #ACAEED);
-    padding: 20px 30px;
-    font-size: 1.1em;
-    border-radius: 50px;
-  }
-  .cta:hover {
-    text-decoration: none;
-    background: linear-gradient(#696484, #8788BA);
-  }
-  .customP{
-    font-size: .8rem;
+  font-family: "DIN Round Pro";
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 79px;
+  font-style: normal;
+  text-align: left;
+  color: #8b48e5;
+  padding-left: 50px;
     }
-    .custom-width{
-      width: 25%!important;
+    #left-img{
+      margin-right: 70px;
+      max-width: 48%;
     }
-  @media screen and (max-width: 996px) {
-    .customP{
-    font-size: .5rem;
-    }
-    .custom-width{
-      width: 100%!important;
+    #Main-title span{
+      font-weight: bold;
     }
     .hero {
-       flex-direction: column;
-       text-align: center;
-       justify-content: center;
-       padding: 30px;
-       padding: 10px;
-       width: 85%;
-      }
-    .hero img {
-       order: 1;
-       margin-bottom: 40px;
-      }
-    .hero div {
-       order: 2;
-       height: auto;
-       margin-bottom: 15px;
-       margin-right: 0;
-      }
-    .home p {
-       padding: 0 50px 0 50px;
-       margin-bottom: 50px;
-      }
-  }
-  @media screen and (max-width: 470px) {
-    #Main-title {
-       font-size: 2em;
-       text-align: center;
-       padding: 0;
-      }
-    #TextDivP {
-       font-size: 1.2em;
-      }
-      #left-img{
-        max-width: 100%;
-      margin-right: 0;
-      }
-      
-  }
-  /* Section 2 --Card Section-- */
-
-  .card-title{
-    font-family: "Montserrat";
-font-size: 30px;
-font-weight: normal;
-line-height: 79px;
-font-style: normal;
-text-align: left;
-color: #8b48e5;
-  }
-  .card-text{
-    
-font-family: "Montserrat";
-font-size: 21px;
-font-weight: normal;
-line-height: 44px;
-font-style: normal;
-text-align: left;
-color: #b1b1b1;
-  }
-  .card-btn{
- 
-
-border-radius: 59px!important;
-
-filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.16 ));
-
-background-color: #d4b5ff!important;
-  }
-
-  #section3 {
-    background-image: url("../main-img/Main-div-bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  #CenterImg{
-    
-  }
+      padding-bottom: 140px;
+      padding-top: 70px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: auto;
+      background-image: url('../main-img/Main-div-bg.png');
+      background-repeat: no-repeat;
+    }
+    #TextDiv {
+      padding-top: 0;
+      margin-top: 50px;
+    }
+    #orderbtn{
+      /* Rectangle 7 */
   
-  .CenterFristCol{
-    margin-left: 10%;
-  }
- /* section 4 */
- .div-title{
-  font-family: "Montserrat";
-font-size: 35px;
-font-weight: bold;
-line-height: 79px;
-font-style: normal;
-text-align: left;
-color: #8b48e5;
- }
- .div-paragraph{
-  font-family: "TrolaW03-LightItalic";
-font-size: 20px;
-font-weight: normal;
-line-height: 27px;
-font-style: normal;
-text-align: left;
-color: #6e6c6b;
- }
- .customDivimage{
-  margin-top: 50%;
- }
- @media screen and (max-width: 600px) {
-  .div-paragraph{
-    font-size: 15px;
-
-  }
-  .div-title{
-    font-size: 20px;
-    line-height: 1.8rem;
-
-  }
-
- }
- /* section 5 */
-
- .div-secount-title{
-  font-family: "Montserrat";
-font-size: 24px;
-font-weight: normal;
-font-style: normal;
-text-align: left;
-color: #8b48e5;
- }
- #Section-5{
-  background-image: url("../main-img/Main-div-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 10% 0;
- }
- .p-div{
-  padding-left: 10%!important;
-    padding-top: 10%;
- }
- #explore-btn{
-  width: 190px;
-  height: 52px;
-  border: none;
+  width: 310px;
+  height: 85px;
+  
   border-radius: 59px;
   
   filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.16 ));
   
-  background: #d4b5ff
- }
- .custome-desctiption-img{
-  font-family: "TrolaW03-LightItalic";
-font-size: 15px;
-font-weight: normal;
-line-height: 27px;
-font-style: normal;
-text-align: left;
-color: #6e6c6b;
-margin-top: 10%;
- }
- #KidsImg{
-  width: 63%;
+  background: #d4b5ff;
+  border: none;
   
-  margin-top: 36%;
+    }
+    h1 {
+      color: #A5B4FC;
+      font-size: 3em;
+      padding-bottom: 25px;
+    }
+    #TextDivP {
+      font-family: "TrolaW03-LightItalic";
+      font-size: 24px;
+      font-weight: normal;
+      line-height: 27px;
+      font-style: normal;
+      text-align: left;
+      color: #6e6c6b;
+    }
+  
+   
+    .cta {
+      color: white;
+      background: linear-gradient(#8E86B5, #ACAEED);
+      padding: 20px 30px;
+      font-size: 1.1em;
+      border-radius: 50px;
+    }
+    .cta:hover {
+      text-decoration: none;
+      background: linear-gradient(#696484, #8788BA);
+    }
+    .customP{
+      font-size: .8rem;
+      }
+      .custom-width{
+        width: 25%!important;
+      }
+    @media screen and (max-width: 996px) {
+      .customP{
+      font-size: .5rem;
+      }
+      .custom-width{
+        width: 100%!important;
+      }
+      .hero {
+         flex-direction: column;
+         text-align: center;
+         justify-content: center;
+         padding: 30px;
+         padding: 10px;
+         width: 85%;
+        }
+      .hero img {
+         order: 1;
+         margin-bottom: 40px;
+        }
+      .hero div {
+         order: 2;
+         height: auto;
+         margin-bottom: 15px;
+         margin-right: 0;
+        }
+      .home p {
+         padding: 0 50px 0 50px;
+         margin-bottom: 50px;
+        }
+    }
+    @media screen and (max-width: 470px) {
+      #Main-title {
+         font-size: 2em;
+         text-align: center;
+         padding: 0;
+        }
+      #TextDivP {
+         font-size: 1.2em;
+        }
+        #left-img{
+          max-width: 100%;
+        margin-right: 0;
+        }
+        
+    }
+    /* Section 2 --Card Section-- */
+  
+    .card-title{
+      font-family: "Montserrat";
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 79px;
+  font-style: normal;
+  text-align: left;
+  color: #8b48e5;
+    }
+    .card-text{
+      
+  font-family: "Montserrat";
+  font-size: 21px;
+  font-weight: normal;
+  line-height: 44px;
+  font-style: normal;
+  text-align: left;
+  color: #b1b1b1;
+    }
+    .card-btn{
+   
+  
+  border-radius: 59px!important;
+  
+  filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.16 ));
+  
+  background-color: #d4b5ff!important;
+    }
+  
+    #section3 {
+      background-image: url("../main-img/Main-div-bg.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    #CenterImg{
+      
+    }
+    
+    .CenterFristCol{
+      margin-right: 20%;
+    }
+    .CenterFristCol-right{
+      margin-left: 20%;
 
-
- }
- .ml-3{
-  margin-left: 1rem;
- }
- #seciotn-5-row{
-  max-width: 100%;
- }
- @media screen and (max-width: 600px) {
-  #seciotn-5-row{
-    padding-top: 40%; 
+    }
+   /* section 4 */
+   .div-title{
+    font-family: "Montserrat";
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 79px;
+  font-style: normal;
+  text-align: left;
+  color: #8b48e5;
+   }
+   .div-paragraph{
+    font-family: "TrolaW03-LightItalic";
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 27px;
+  font-style: normal;
+  text-align: left;
+  color: #6e6c6b;
+   }
+   .customDivimage{
+    margin-top: 50%;
+   }
+   @media screen and (max-width: 600px) {
+    .div-paragraph{
+      font-size: 15px;
+  
+    }
+    .div-title{
+      font-size: 18px;
+      line-height: 1.8rem;
+  
+    }
+  
+   }
+   /* section 5 */
+  
+   .div-secount-title{
+    font-family: "Montserrat";
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  text-align: left;
+  color: #8b48e5;
+   }
+   #Section-5{
+    background-image: url("../main-img/Main-div-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10% 0;
+   }
+   .p-div{
+    padding-left: 10%!important;
+      padding-top: 10%;
+   }
+   #explore-btn{
+    width: 190px;
+    height: 52px;
+    border: none;
+    border-radius: 59px;
+    
+    filter: drop-shadow(0px 4px 3px rgba(0,0,0,0.16 ));
+    
+    background: #d4b5ff
+   }
+   .custome-desctiption-img{
+    font-family: "TrolaW03-LightItalic";
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 27px;
+  font-style: normal;
+  text-align: left;
+  color: #6e6c6b;
+  margin-top: 10%;
+   }
+   #KidsImg{
+    width: 63%;
+    
+    margin-top: 36%;
+  
+  
+   }
+   .ml-3{
+    margin-left: 1rem;
+   }
+   #seciotn-5-row{
+    max-width: 100%;
+   }
+   @media screen and (max-width: 600px) {
+    #seciotn-5-row{
+      padding-top: 40%; 
+    }
   }
+  
+  #left-img{
+    animation: fadeInLeft 3s ease-in-out;
+  
+  }
+  /*animation fade in right*/
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(300px);
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-300px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  /* section 6*/
+  @media screen and (min-width: 600px) {
+
+  .card-img-top-Article{
+width: 60%;
+transform: translateY(-20%);
+
+  }
+  
 }
+@media screen and (max-width: 600px) {
 
-#left-img{
-  animation: fadeInLeft 3s ease-in-out;
+ .inline-elements{
+  display: inline!important; }
+}
+.articleCard{
+  border-radius: 47px!important;
 
+filter: drop-shadow(0px 6px 5px rgba(0,0,0,0.16 ))!important;
+
+background: #ede0ff!important;
 }
-/*animation fade in right*/
-@keyframes fadeInRight {
-  from {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-300px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.articleCard h5{
+  padding-top: 50%;
+  padding-left: 10%;
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: #8b48e5;
 }
