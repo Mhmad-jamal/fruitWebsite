@@ -9,14 +9,20 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Fruit') }}</title>
-@if (Route::has('home'))
-<link rel="stylesheet" href="{{ asset('user/css/home.css') }}">
-
+    @if (Route::currentRouteName() === 'welcome' )
+    <link rel="stylesheet" href="{{ asset('user/css/home.css') }}">
 @endif
-@if (Route::has('login')&& (Route::has('register')))
+@if (Route::currentRouteName('login')&& (Route::currentRouteName('register')))
 <link rel="stylesheet" href="{{ asset('user/css/Signin.css') }}">
 
 @endif
+@if (Route::currentRouteName() === 'Article')
+<link rel="stylesheet" href="{{ asset('user/css/article.css') }}">
+@endif
+@if (Route::currentRouteName() === 'Delivery')
+<link rel="stylesheet" href="{{ asset('user/css/Delivery.css') }}">
+@endif
+
 
 
     <!-- Fonts -->
@@ -44,16 +50,16 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Store</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Article</a>
+                            <a class="nav-link" href="{{route('Article')}}">Article</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Delivery</a>
+                            <a class="nav-link" href="{{route('Delivery')}}">Delivery</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
@@ -157,7 +163,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4 overflow-hidden">
 
             @yield('content')
         </main>

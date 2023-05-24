@@ -16,10 +16,17 @@ use App\Http\Middleware\CheckRole;
 
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Auth::routes();
+    return view('user.welcome');
+})->name('welcome');
+Route::get('/Article', function () {
+    return view('user.Article');
+})->name('Article');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+Route::get('/Delivery', function () {
+    return view('user.Delivery');
+})->name('Delivery');
 
 Route::middleware(['CheckRole:admin'])->group(function () {
     Route::get('/dashboard', function () {
