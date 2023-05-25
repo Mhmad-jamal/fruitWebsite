@@ -194,6 +194,7 @@
    }
    .customDivimage{
     margin-top: 50%;
+    max-width: 25%!important;
    }
    @media screen and (max-width: 600px) {
     .div-paragraph{
@@ -222,7 +223,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 10% 0;
+    padding: 14% 0;
    }
    .p-div{
     padding-left: 10%!important;

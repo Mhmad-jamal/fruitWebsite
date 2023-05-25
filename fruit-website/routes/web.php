@@ -36,7 +36,7 @@ Route::middleware(['CheckRole:admin'])->group(function () {
     Route::get('/categories/add', function () {
         return view('admin.Categories.Add_Categories');
         })->name('categories.add');
-        
+        Route::post('/categories/add', 'CategoriesController@store')->name('categories.store');
 
 
 });
