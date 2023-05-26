@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckRole;
+use App\Http\Controllers\CategoriesController;
+use Illuminate\Support\Facades\Redirect;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -33,10 +36,14 @@ Route::middleware(['CheckRole:admin'])->group(function () {
         return view('admin.dashboard');
     })->name('dashboard');
     /* Categories route */
-    Route::get('/categories/add', function () {
+    Route::any('/categories/add', function () {
         return view('admin.Categories.Add_Categories');
         })->name('categories.add');
-        Route::post('/categories/add', 'CategoriesController@store')->name('categories.store');
+        Route::post('/categories', [CategoriesController::class, 'store'])->name('categories.store');
+
+        
+            Route::get('/categories/Show', [CategoriesController::class, 'Show'])->name('categories.Show');
+
 
 
 });

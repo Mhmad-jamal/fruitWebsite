@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use App\Models\Category;
+use Illuminate\Support\Facades\Redirect;
 
 class CategoriesController extends Controller
 {
@@ -26,32 +29,40 @@ class CategoriesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        // Validation code and logic to store the category
-   
-        // Image upload logic
-        if ($request->hasFile('Category_Image')) {
-            $image = $request->file('Category_Image');
-            $imagePath = $image->store('category_images', 'public');
-            $category->category_image = $imagePath;
-        }
-    
-        // Example code to create a new category
-        $category = new Category();
-        $category->category_name = $request->input('Category_Name');
-        $category->category_description = $request->input('Category_Details');
-        $category->save();
-    
-        // Redirect or return a response
-    }
-    
+ 
+
+     public function store(Request $request)
+     {
+         // Validation code and logic to store the category
+     
+         // Image upload logic
+         if ($request->hasFile('Category_Image')) {
+             $image = $request->file('Category_Image');
+             $imagePath = $image->store('category_images', 'public');
+         } else {
+             $imagePath = null; // Or provide a default image path if necessary
+         }
+     
+         // Example code to create a new category
+         $category = new Category();
+         $category->category_name = $request->input('Category_Name');
+         $category->category_description = $request->input('Category_Details');
+         $category->category_image = $imagePath;
+         $category->save();
+     
+         Alert::success('Categories', 'Category Success Add');
+         return Redirect::route('categories.add')->with('success', 'Category created successfully!');
+
+         // Redirect or return a response
+     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
+        $categories = Category::all();
+        return view('admin.Categories.Show_categories', ['categories' => $categories]);
         //
     }
 

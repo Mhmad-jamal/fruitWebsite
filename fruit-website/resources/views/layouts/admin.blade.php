@@ -1,7 +1,11 @@
+@include('sweetalert::alert')
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="{{ asset('vendor/sweetalert/sweetalert.css') }}">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -88,8 +92,8 @@
                     </a>
                   </li>
                   <li class="menu-item">
-                    <a href="" class="menu-link">
-                      <div data-i18n="Without navbar">Product</div>
+                    <a href="{{route('categories.Show')}}" class="menu-link">
+                      <div data-i18n="Without navbar">All Categories</div>
                     </a>
                   </li>
                  
@@ -238,6 +242,7 @@
             <!-- Content wrapper -->
             <div class="content-wrapper mt-3">
           @yield('content')
+
             <!-- Content wrapper -->
           </div>
           <!-- / Layout page -->
@@ -265,3 +270,4 @@
 <script src="{{ asset('admin/assets/js/dashboards-analytics.js') }}"></script>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="{{ asset('vendor/sweetalert/sweetalert.min.js') }}"></script>
