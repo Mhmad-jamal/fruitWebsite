@@ -214,6 +214,135 @@
     </div>
   </div>
  <!-- Carousel wrapper -->
+ <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+  <!-- Controls -->
+  <div class="d-flex justify-content-center mb-4">
+    <button class="carousel-control-prev position-relative" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next position-relative" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Inner -->
+  <div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active carousel-item-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+         
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+         
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item carousel-item-next carousel-item-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+           
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+       
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar" style="width: 150px;">
+            <h5 class="mb-3 card-title text-center">Maria Kate</h5>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque corrupti.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="far fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle shadow-1-strong mb-4" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(6).webp" alt="avatar" style="width: 150px;">
+            <h5 class="mb-3 card-title text-center">Anna Deynah</h5>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+              officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp" alt="avatar" style="width: 150px;">
+            <h5 class="mb-3 card-title text-center">John Doe</h5>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+              suscipit laboriosam, nisi ut aliquid commodi.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li>
+                <i class="fas fa-star-half-alt fa-sm"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar" style="width: 150px;">
+            <h5 class="mb-3 card-title text-center">Maria Kate</h5>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque corrupti.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="far fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Inner -->
+</div>
+
+
 
 <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
   <!-- Controls -->
@@ -433,5 +562,6 @@
 </div>
 <!-- Carousel wrapper -->
 </section>
+
 
 @endsection
