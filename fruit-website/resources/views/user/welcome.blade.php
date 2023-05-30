@@ -171,50 +171,7 @@
   <div class="col-12  text-center div-title">Article Section</div>
 </div>
 
-<div class="row mt-3">
-  <div class="col  d-flex justify-content-center" id="articleSection">
-    <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;" id="LeftArticleCard">
-      <div class="inline-elements d-flex justify-content-beteween" id="Removed-flex-in-mobile">
-        <h5>Article</h5>
-        <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
-      </div>
-          <div class="card-body">
-      <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-  <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
-   
-<div class="inline-elements d-flex justify-content-beteween" >
-  <h5>Article</h5>
-  <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
-</div>
-    <div class="card-body">
-      <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content Some quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the card.</p>
-    </div>
-  </div>
-  <div class="card text-center mb-3 ml-3 articleCard" style="width: 18rem;" id="RightArticleCard">
-    <div class="inline-elements d-flex justify-content-beteween">
-      <h5>Article</h5>
-      <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
-    </div>    <div class="card-body">
-      <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content.</p>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
-></script>
-<section class="container-fluid" id="Section-6">
-  <div class="row">
-    <div class="col-12 ">
-      <h2 class="div-title text-center mb-3">Customer Rating</h2>
-    </div>
-  </div>
- <!-- Carousel wrapper -->
- <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+<div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
   <!-- Controls -->
   <div class="d-flex justify-content-center mb-4">
     <button class="carousel-control-prev position-relative" type="button" data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
@@ -233,15 +190,42 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-         
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+ 
+              <div class="inline-elements d-flex justify-content-beteween" >
+                <h5>Article</h5>
+                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+              </div>
+                  <div class="card-body">
+                    <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content Some quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the card.</p>
+                  </div>
+                </div>
           </div>
 
           <div class="col-lg-4 d-none d-lg-block">
-         
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+ 
+              <div class="inline-elements d-flex justify-content-beteween" >
+                <h5>Article</h5>
+                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+              </div>
+                  <div class="card-body">
+                    <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content Some quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the card.</p>
+                  </div>
+                </div>
           </div>
 
           <div class="col-lg-4 d-none d-lg-block">
-          
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+ 
+              <div class="inline-elements d-flex justify-content-beteween" >
+                <h5>Article</h5>
+                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+              </div>
+                  <div class="card-body">
+                    <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content Some quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the card.</p>
+                  </div>
+                </div>
           </div>
         </div>
       </div>
@@ -252,108 +236,81 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-           
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+ 
+              <div class="inline-elements d-flex justify-content-beteween" >
+                <h5>Article</h5>
+                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+              </div>
+                  <div class="card-body">
+                    <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content Some quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the card.</p>
+                  </div>
+                </div>
           </div>
 
           <div class="col-lg-4 d-none d-lg-block">
-       
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+ 
+              <div class="inline-elements d-flex justify-content-beteween" >
+                <h5>Article</h5>
+                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+              </div>
+                  <div class="card-body">
+                    <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content Some quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the card.</p>
+                  </div>
+                </div>
           </div>
 
           <div class="col-lg-4 d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar" style="width: 150px;">
-            <h5 class="mb-3 card-title text-center">Maria Kate</h5>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-              praesentium voluptatum deleniti atque corrupti.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="far fa-star fa-sm"></i></li>
-            </ul>
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+ 
+              <div class="inline-elements d-flex justify-content-beteween" >
+                <h5>Article</h5>
+                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
+              </div>
+                  <div class="card-body">
+                    <p class="card-text articleP">Some quick example text to build on the Article and make up the bulk of the card's content Some quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the cardSome quick example text to build on the Article and make up the bulk of the card.</p>
+                  </div>
+                </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Single item -->
-    <div class="carousel-item">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <img class="rounded-circle shadow-1-strong mb-4" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(6).webp" alt="avatar" style="width: 150px;">
-            <h5 class="mb-3 card-title text-center">Anna Deynah</h5>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
-              officiis hic tenetur quae quaerat ad velit ab hic tenetur.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp" alt="avatar" style="width: 150px;">
-            <h5 class="mb-3 card-title text-center">John Doe</h5>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-              suscipit laboriosam, nisi ut aliquid commodi.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li>
-                <i class="fas fa-star-half-alt fa-sm"></i>
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 d-none d-lg-block">
-            <img class="rounded-circle shadow-1-strong mb-4" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar" style="width: 150px;">
-            <h5 class="mb-3 card-title text-center">Maria Kate</h5>
-            <p class="text-muted">
-              <i class="fas fa-quote-left pe-2"></i>
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-              praesentium voluptatum deleniti atque corrupti.
-            </p>
-            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="fas fa-star fa-sm"></i></li>
-              <li><i class="far fa-star fa-sm"></i></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+   
   </div>
   <!-- Inner -->
 </div>
 
+</section>
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+></script>
 
 
-<div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+
+<section class="container-fluid" id="Section-6">
+  <div class="row">
+    <div class="col-12 ">
+      <h2 class="div-title text-center mb-3">Customer Rating</h2>
+    </div>
+  </div>
+ <!-- Carousel wrapper -->
+ 
+
+
+<div id="carouselMultiItemExample2" class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
   <!-- Controls -->
   <div class="d-flex justify-content-center mb-4">
     <button class="carousel-control-prev position-relative" type="button"
-      data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+      data-mdb-target="#carouselMultiItemExample2" data-mdb-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next position-relative" type="button"
-      data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+      data-mdb-target="#carouselMultiItemExample2" data-mdb-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>

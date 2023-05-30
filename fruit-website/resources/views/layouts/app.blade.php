@@ -54,16 +54,16 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('welcome')}}">Home</a>
+                            <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="{{route('welcome')}}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Store</a>
+                            <a class="nav-link {{ Request::is('Store') ? 'active' : '' }}" href="{{route('Store')}}">Store</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('Article')}}">Article</a>
+                            <a class="nav-link {{ Request::is('Article') ? 'active' : '' }}" href="{{route('Article')}}">Article</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('Delivery')}}">Delivery</a>
+                            <a class="nav-link {{ Request::is('Delivery') ? 'active' : '' }}" href="{{route('Delivery')}}">Delivery</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>

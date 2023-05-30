@@ -27,9 +27,14 @@ Route::get('/Article', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
+//Delivery
 Route::get('/Delivery', function () {
     return view('user.Delivery');
 })->name('Delivery');
+//Store
+Route::get('/Store', function () {
+    return view('user.Store');
+})->name('Store');
 
 Route::middleware(['CheckRole:admin'])->group(function () {
     Route::get('/dashboard', function () {
