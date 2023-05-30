@@ -1,0 +1,47 @@
+.img-fluid{
+    max-width: 200px!important;
+
+    max-height: 250px!important;
+
+}
+.containerCategory{
+    max-width: 250px!important;
+max-height: 330px!important;
+
+border-radius: 47px;
+
+color: white;
+background: #8b48e5
+}
+.image-top-center {
+    position: relative;
+    top: -50%;
+    transform: translateY(-50%);
+  }
+  .CustomTextCard
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50%;
+    transform: translateY(-30%);
+}
+ .text-truncate{
+    font-size: 15px;
+    white-space: normal!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 6!important;
+    -webkit-box-orient: vertical!important;
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+ }
+ #customediv{
+    background-image: url(../main-img/Main-div-bg.png);
+    background-repeat: no-repeat;
+ }
+
+ .containerCategory:hover{
+    transform: scale(1.1);
+ }

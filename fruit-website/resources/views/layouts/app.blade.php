@@ -23,6 +23,9 @@
 @if (Route::currentRouteName() === 'Article')
 <link rel="stylesheet" href="{{ asset('user/css/article.css') }}">
 @endif
+@if (Route::currentRouteName() === 'Store')
+<link rel="stylesheet" href="{{ asset('user/css/store.css') }}">
+@endif
 @if (Route::currentRouteName() === 'Delivery')
 <link rel="stylesheet" href="{{ asset('user/css/Delivery.css') }}">
 @endif
