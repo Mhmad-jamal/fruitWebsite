@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckRole;
+use App\Http\Controllers\ProductController;
+
+
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Redirect;
 
@@ -35,6 +38,8 @@ Route::get('/Delivery', function () {
 Route::get('/Store', function () {
     return view('user.Store');
 })->name('Store');
+Route::get('/product/{id}', [ProductController::class, 'show'])->name('product');
+
 
 Route::middleware(['CheckRole:admin'])->group(function () {
     Route::get('/dashboard', function () {
