@@ -1,8 +1,7 @@
 #customediv{
     background-image: url(../main-img/Main-div-bg.png);
     background-repeat: no-repeat;
-    height: 680px;
-    padding-top: 20%;
+  
     align-items: center;
  }
  #leftcol{
