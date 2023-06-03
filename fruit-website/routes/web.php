@@ -28,9 +28,12 @@ Route::get('/Article', function () {
     return view('user.Article');
 })->name('Article');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/about', function () {
+    return view('user.about');
+})->name('about');
 Auth::routes();
 //Delivery
+
 Route::get('/Delivery', function () {
     return view('user.Delivery');
 })->name('Delivery');

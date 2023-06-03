@@ -87,17 +87,19 @@ background: #ede0ff;
   }
   #ContainerSection{
     background-image: url("../main-img/Main-div-bg.png");
-    background-position: center;
+    background-position: inherit;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 5%;
   }
-
+  #app > main{
+  padding-top: 0!important;
+}
  
   @media (min-width: 576px) {
     /* CSS styles specific to small devices */
     #ImgCenter{
-        transform: translateY(-144px);
+        transform: translateY(-100);
       }
     
       
@@ -110,7 +112,12 @@ background: #ede0ff;
       #left-img{
         width: 100%!important;
       }
-      
+      #left-img{
+        width: 100%;
+    }
   }
+  #left-img{
+    width: 40%;
+}
  
  

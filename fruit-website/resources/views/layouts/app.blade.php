@@ -16,6 +16,15 @@
     @if (Route::currentRouteName() === 'welcome' )
     <link rel="stylesheet" href="{{ asset('user/css/home.css') }}">
 @endif
+
+@if (Route::currentRouteName() == 'about' )
+<link rel="stylesheet" href="{{asset('user/css/about.css')}}">
+
+    <link rel="stylesheet" href="{{ asset('user/css/about2.css') }}">
+    <link rel="stylesheet" href="{{ asset('user/css/about3.css') }}">
+
+@endif
+
 @if (Route::currentRouteName('login')&& (Route::currentRouteName('register')))
 <link rel="stylesheet" href="{{ asset('user/css/Signin.css') }}">
 
@@ -69,7 +78,7 @@
                             <a class="nav-link {{ Request::is('Delivery') ? 'active' : '' }}" href="{{route('Delivery')}}">Delivery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="{{route('about')}}">About</a>
                         </li>
                     </ul>
                     <span class="navbar-text" id="LoginSpan">

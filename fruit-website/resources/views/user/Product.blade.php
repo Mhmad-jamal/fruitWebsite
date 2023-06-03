@@ -10,11 +10,12 @@
 <div class="row">
   <div class="col-md-9">
   <div class="row">
-    <div class="col">subsicription</div>
+    <div class="col-md-12 text-white " id="desctiption">desctiption</div>
+   
 
   </div>
   <div class="row" id="ContainerRow">
-    <div class="col-md-3 text-center customeText">
+    <div class="col-md-4 text-center customeText">
       <div class="selecotr-item">
         <input type="radio" id="radio1" name="selector" class="selector-item_radio" checked>
         <label for="radio1" class="selector-item_label">  
@@ -23,29 +24,21 @@
       </label>
     </div>
     </div>
-    <div class="col-md-3 text-center customeText">
+    <div class="col-md-4 text-center customeText">
       <div class="selecotr-item">
         <input type="radio" id="radio2" name="selector" class="selector-item_radio">
         <label for="radio2" class="selector-item_label">   <h2>Weekly</h2>
           <p class="text-center customeText">$6</p></label>
     </div>
     </div>
-    <div class="col-md-3 text-center customeText">
+    <div class="col-md-4 text-center customeText">
       <div class="selecotr-item">
         <input type="radio" id="radio3" name="selector" class="selector-item_radio">
         <label for="radio3" class="selector-item_label">   <h2>Monthly</h2>
           <p class="text-center customeText">$6</p></label>
     </div>
     </div>
-    <div class="col-md-3 text-center customeText">
-      <div class="selecotr-item">
-        <input type="radio" id="radio4" name="selector" class="selector-item_radio">
-        <label for="radio4" class="selector-item_label">
-          <h2>Yearly</h2>
-          <p class="text-center customeText">$6</p></label>
-    </div>
-
-    </div>
+   
   </div>
   
   </div>

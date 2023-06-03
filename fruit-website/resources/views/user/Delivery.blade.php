@@ -2,11 +2,11 @@
 
 @section('content')
 
-<div class="container-fluid mt-4" id="ContainerSection">
+<div class="container-fluid " id="ContainerSection">
     <div class="row d-flex justify-content-center" id="ImgCenter">
 
-        <div class="col-md-8 d-flex justify-content-center">
-            <img class="img-fluid w-50"  id="left-img" src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
+        <div class="col-md-8 d-flex justify-content-center" style="padding: 0">
+            <img class="img-fluid"  id="left-img" src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
     
     
         </div>
