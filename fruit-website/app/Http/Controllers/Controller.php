@@ -9,4 +9,11 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+
+
+    public function show($id)
+    {
+        return view('user.single_article', ['id' => $id]);
+    }
+
 }

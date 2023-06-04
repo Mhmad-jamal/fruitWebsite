@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="{{ asset('user/css/Signin.css') }}">
 
 @endif
-@if (Route::currentRouteName() === 'Article')
+@if (Route::currentRouteName() === 'single-article')
 <link rel="stylesheet" href="{{ asset('user/css/article.css') }}">
 @endif
 @if (Route::currentRouteName() === 'Store')

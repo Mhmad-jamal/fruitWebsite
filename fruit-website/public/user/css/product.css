@@ -76,8 +76,27 @@ background: #8b48e5
 }
 
 #imgContainer{
-    border-left: 1px solid #dee2e6;
 display: flex;
+}
+#leftCol{
+    border-left: 1px solid #dee2e6;
+    display: flex;
+    align-items: flex-center;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: column-reverse;
+   
+}
+#btn{
+    border-color: #8b48e5;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 15px;
+    
+    
+    background: #f0ffd8;
+    color: black;
 }
 
 #ContainerRow{

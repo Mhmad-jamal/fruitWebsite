@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckRole;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Article;
 
 
 use App\Http\Controllers\CategoriesController;
@@ -31,6 +32,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/about', function () {
     return view('user.about');
 })->name('about');
+Route::get('/article/{id}', [Article::class, 'show'])->name('single-article');
+
 Auth::routes();
 //Delivery
 

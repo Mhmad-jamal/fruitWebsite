@@ -1,95 +1,50 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="row d-none">
-          <div class="col">
-            <h1 class="Title">Article</h1>
-          </div>
+<main class="container">
+  <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+      <p class="lead mb-0"><a href="{{Route('single-article', ['id' => 1])}}" class="text-white fw-bold">Continue reading...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="{{Route('single-article', ['id' => 1])}}" class="stretched-link">Continue reading</a>
         </div>
-        <div class="row">
-          <div class="col" id="article-subject">
-            <h1 id="Article-Title">Title</h1>
-            <p id="Article-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam quaerat doloribus eaque, dolorem similique, natus molestiae quasi laudantium harum cum illo vitae enim blanditiis ex pariatur minus in ducimus?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, reprehenderit. Consequuntur sapiente reprehenderit fugiat voluptatum quidem. Possimus nostrum blanditiis modi, voluptates quos architecto rem. Officiis optio deserunt eius quas quod?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, quod perspiciatis. Quasi soluta impedit et quibusdam, at, explicabo expedita laborum voluptas exercitationem illum modi quae possimus voluptates sed quas? Blanditiis?
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius dolorem nisi est aliquam eveniet iusto incidunt optio, commodi quaerat porro nulla ratione, amet tempora consequuntur nostrum ducimus? Quaerat, odio minus!
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laborum animi dolore. Molestiae, praesentium, corporis obcaecati ipsa culpa numquam totam explicabo repudiandae nihil dolorum at excepturi, quae voluptates magnam perspiciatis.
-            </p>
-            <div class="row mt-5">
-                <div class="col d-flex justify-content-end">
-                    <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article"  alt="Card image cap">
-    
-                </div>
-            </div>
-          </div>
-          
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
         </div>
-      
       </div>
-      <div class="col-md-4" id="MoreArticle">
-        <div class="row d-none">
-            <div class="col">
-                <h1 class="Title">Subject </h1>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Design</strong>
+          <h3 class="mb-0">Post title</h3>
+          <div class="mb-1 text-muted">Nov 11</div>
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <a href="{{Route('single-article', ['id' => 1])}}" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
 
-            </div>
         </div>
-     <div class="row mb-3">
-        <div class="col d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <div class="card-text overflow-hidden" style="max-height: 4.5em;">
-                    <p class="mb-0">
-                      Some quick example tesssssssssssssssssssssssssssssssxt to build on the card title and make up the bulk of the card's content.
-                    </p>
-                  </div>
-                  <a href="#" class="">Read More</a>
-                </div>
-                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article" alt="Card image cap">
-              </div>
-              
-        </div>
-     </div>
-     <div class="row mb-3">
-        <div class="col d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <div class="card-text overflow-hidden" style="max-height: 4.5em;">
-                    <p class="mb-0">
-                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </p>
-                  </div>
-                  <a href="#" class="">Read More</a>
-                </div>
-                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article" alt="Card image cap">
-              </div>
-              
-        </div>
-     </div>
-     <div class="row mb-3">
-        <div class="col d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <div class="card-text overflow-hidden" style="max-height: 4.5em;">
-                    <p class="mb-0">
-                      Some quick example text to build on the card title and make up the bulk of the card's content.
-                    </p>
-                  </div>
-                  <a href="#" class="">Read More</a>
-                </div>
-                <img src="{{ asset('user/main-img/Cherry.png') }}" class="card-img-top-Article" alt="Card image cap">
-              </div>
-              
-        </div>
-     </div>
-
       </div>
     </div>
   </div>
+
   
+  </div>
+
+</main>
 @endsection
