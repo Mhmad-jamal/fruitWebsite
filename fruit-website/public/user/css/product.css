@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     align-items: center;
     background-position: center;
+    padding: 8%;
  }
  #leftcol{
     border-radius: 31px;
@@ -27,13 +28,14 @@ background: #8b48e5
     box-shadow:0 0 16px rgba(0,0,0,.2);
 }
 .selecotr-item{
-    position:relative;
-    flex-basis:calc(70% / 3);
-    height:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    position: relative;
+    flex-basis: calc(70% / 3);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
+
 .selector-item_radio{
     appearance:none;
     display:none;
@@ -94,17 +96,17 @@ display: flex;
     border-style: solid;
     border-radius: 15px;
     
-    
+    text-align: center;
+    text-decoration: none;
     background: #f0ffd8;
     color: black;
 }
 
-#ContainerRow{
-    padding: 5%;
-}
+
 h2{
     cursor: pointer;
 }
 #desctiption{
     margin-left: 10%;
+    max-width: 80%;
 }

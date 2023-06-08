@@ -40,6 +40,9 @@ Auth::routes();
 Route::get('/Delivery', function () {
     return view('user.Delivery');
 })->name('Delivery');
+Route::get('/Cart', function () {
+    return view('user.Cart');
+})->name('Cart');
 //Store
 Route::get('/Store', function () {
     return view('user.Store');

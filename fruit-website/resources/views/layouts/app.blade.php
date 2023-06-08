@@ -25,9 +25,12 @@
 
 @endif
 
-@if (Route::currentRouteName('login')&& (Route::currentRouteName('register')))
+@if (Route::currentRouteName()== 'login' && (Route::currentRouteName()=='register'))
 <link rel="stylesheet" href="{{ asset('user/css/Signin.css') }}">
 
+@endif
+@if(Route::currentRouteName() == 'Cart')
+    <link rel="stylesheet" href="{{ asset('user/css/Cart.css') }}">
 @endif
 @if (Route::currentRouteName() === 'single-article')
 <link rel="stylesheet" href="{{ asset('user/css/article.css') }}">

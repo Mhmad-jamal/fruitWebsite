@@ -8,7 +8,7 @@
     <div class="row" id="customRow">
         <div class="col-sm-12" id="leftcol">
 <div class="row">
-  <div class="col-md-11">
+  <div class="col-md-12">
   <div class="row">
     <div class="col-md-12 text-white " id="desctiption">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat eum ea maiores eius omnis obcaecati. Odio velit quas libero illo modi ipsum magnam repudiandae, nisi quos cum natus deserunt voluptatem? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus culpa inventore obcaecati, et, molestiae dolor nulla ea, necessitatibus expedita tempora soluta illum blanditiis. Itaque tenetur fuga earum inventore beatae cum.lor</div>
    
@@ -41,7 +41,7 @@
    
     <div class="col-sm-3" id="leftCol">
 
-      <button id="btn">Add To Cart</button>
+      <a id="btn" href="{{route('Cart')}}">Add To Cart</a>
       <img src="{{asset('user/main-img/Main_IMG.png')}}" alt="..." class="img-thumbnail">
 
     </div>

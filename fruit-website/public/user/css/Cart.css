@@ -1,0 +1,86 @@
+.test {
+    width: 148px;
+    height: 148px;
+    border-color: #8b48e3;
+    border-width: 12px;
+    border-style: solid;    margin: auto;
+  }
+  .test {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b48e3;
+    font-size: 5rem;
+  }
+  .h5{
+    color: #8b48e3;
+
+  }
+ 
+  #customediv{
+    height: fit-content;
+    background-image: url(../main-img/Main-div-bg.png);
+    background-repeat: no-repeat;
+    align-items: center;
+    background-position: center;
+    padding-bottom: 5%;
+    
+ }
+ .img
+ {
+    max-width: 80%!important;
+
+ }
+ .circle-container{
+    border-color: #8b48e5;
+border-width: 7px;
+border-style: solid;
+ }
+ #right_div{
+ padding-left: 5%;
+    width: 80%;
+    height: 150px;
+    color: white;
+    border-radius: 31px;
+    
+    filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.16 ));
+    
+    background: #8b48e5
+ }
+ .circle-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .circle-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+ #customRow{
+    
+border-radius: 31px;
+
+filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.16 ));
+
+background: #ffffff;
+width: 80%;
+height: 50%;
+display: flex;
+align-items: center;
+ }
+ @media only screen and (max-width: 768px) {
+    /* Your CSS styles for phones */
+    #customRow{
+height: 80%;
+    }
+    .rounded-circle{
+        margin-top: 5%;
+    }
+  }
