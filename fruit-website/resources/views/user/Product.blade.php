@@ -6,6 +6,13 @@
 <section class="container-fluid d-flex justify-content-center mb-3 " id="customediv">
 
     <div class="row" id="customRow">
+      <div class="row mb-3">
+        <div class="col-md-12">
+          <div class="circle-container d-flex justify-content-center">
+            <img src="https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-1024.png" alt="Image" style="max-width: 25%">
+          </div>
+        </div>
+      </div>
         <div class="col-sm-12" id="leftcol">
 <div class="row">
   <div class="col-md-12">
@@ -41,7 +48,7 @@
    
     <div class="col-sm-3" id="leftCol">
 
-      <a id="btn" href="{{route('Cart')}}">Add To Cart</a>
+      <a id="btn" href="{{route('Cart')}}">Continue To Payment</a>
       <img src="{{asset('user/main-img/Main_IMG.png')}}" alt="..." class="img-thumbnail">
 
     </div>
