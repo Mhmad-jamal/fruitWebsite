@@ -66,13 +66,16 @@
           <label for="radio3" class="selector-item_label">   <h2>Monthly</h2>
             <p class="text-center customeText"></p></label>
             <input type="hidden" id="radio3" name="selector" class="selector-item_radio">
-            <label for="" class="color-white display-4"> 10$
+            <label for="" class="color-white display-6"> 10$
               <p class="text-center customeText"></p></label>
-              <div style=" margin-bottom: 7%;" class="circle-icon bg-white text-black d-flex align-items-center justify-content-center icon" >
+              <div style=" margin-bottom: 5%;" class="circle-icon bg-white text-black d-flex align-items-center justify-content-center icon" >
                 <i class="fas fa-plus"></i>
               </div>
-              
-              <div style="margin-bottom: 7%;" class="circle-icon bg-white text-black d-flex align-items-center justify-content-center icon" >
+              <div style=" margin-bottom: 5%;" class="text-white " >
+                <label for="" class="color-white display-6"> 10
+
+              </div>
+              <div style="margin-bottom: 5%;" class="circle-icon bg-white text-black d-flex align-items-center justify-content-center icon" >
                 <i class="fas fa-minus"></i>
               </div>
               
