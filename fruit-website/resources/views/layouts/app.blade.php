@@ -53,6 +53,9 @@
 @if (Route::currentRouteName() === 'Payment')
 <link rel="stylesheet" href="{{ asset('user/css/Payment.css') }}">
 @endif
+@if (Route::currentRouteName() === 'gift')
+<link rel="stylesheet" href="{{ asset('user/css/gift.css') }}">
+@endif
 
 
     <!-- Fonts -->

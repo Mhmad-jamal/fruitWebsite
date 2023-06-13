@@ -55,6 +55,9 @@ Route::get('/Payment', function () {
 Route::get('/basket', function () {
     return view('user.basket');
 })->name('basket');
+Route::get('/gift', function () {
+    return view('user.gift');
+})->name('gift');
 //Store
 Route::get('/Store', function () {
     return view('user.Store');

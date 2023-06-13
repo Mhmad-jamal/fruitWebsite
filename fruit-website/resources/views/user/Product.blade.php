@@ -136,7 +136,7 @@
                                     height: 100%;">
 
 <img src="http://127.0.0.1:8000/user/main-img/Logo.png" alt="..." height="200">
-                                      <button class="btn card-btn" style="background: white; border-radius: 10px;width: 90%;">Continue</button>
+                                  <a href="{{route('gift')}}" class="btn card-btn" style="background: white; border-radius: 10px;width: 90%;">    Continue </a>
                                   </div>
 
                             </div>
