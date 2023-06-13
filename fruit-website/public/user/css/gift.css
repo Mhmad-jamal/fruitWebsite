@@ -12,8 +12,13 @@
    
     margin-bottom: 5%;
     position: absolute;
-    margin-left: 30%;
+    margin-left: 4%;
 }
 .card{
     background-color: #ffecc8!important;
+    border-radius: 20px!important;
+}
+#imgContainer{
+    z-index: 45;
+    transform: translateY(55px);
 }
