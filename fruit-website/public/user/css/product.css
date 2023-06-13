@@ -114,9 +114,10 @@ h2{
 }
 .icon{
     color: #8b48e5;
-    border-radius: 50px;
-    height: 51%;
-    width: 22%;
+    border-radius: 100px;
+    height: 53%;
+    width: 19%;
+    margin: 7px;
 }
 #desctiption{
     margin-left: 10%;
