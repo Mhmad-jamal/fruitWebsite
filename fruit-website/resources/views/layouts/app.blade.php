@@ -41,7 +41,18 @@
 @if (Route::currentRouteName() === 'Delivery')
 <link rel="stylesheet" href="{{ asset('user/css/Delivery.css') }}">
 @endif
-
+@if (Route::currentRouteName() === 'basket')
+<link rel="stylesheet" href="{{ asset('user/css/basket.css') }}">
+@endif
+@if (Route::currentRouteName() === 'Allcart')
+<link rel="stylesheet" href="{{ asset('user/css/Allcart.css') }}">
+@endif
+@if (Route::currentRouteName() === 'Contact')
+<link rel="stylesheet" href="{{ asset('user/css/Contact.css') }}">
+@endif
+@if (Route::currentRouteName() === 'Payment')
+<link rel="stylesheet" href="{{ asset('user/css/Payment.css') }}">
+@endif
 
 
     <!-- Fonts -->

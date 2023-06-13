@@ -43,6 +43,18 @@ Route::get('/Delivery', function () {
 Route::get('/Cart', function () {
     return view('user.Cart');
 })->name('Cart');
+Route::get('/Allcart', function () {
+    return view('user.Allcart');
+})->name('Allcart');
+Route::get('/Contact', function () {
+    return view('user.Contact');
+})->name('Contact');
+Route::get('/Payment', function () {
+    return view('user.Payment');
+})->name('Payment');
+Route::get('/basket', function () {
+    return view('user.basket');
+})->name('basket');
 //Store
 Route::get('/Store', function () {
     return view('user.Store');
