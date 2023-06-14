@@ -201,6 +201,10 @@
       font-size: 15px;
   
     }
+    .article{
+      display: flex;
+      justify-content: center;
+    }
     .div-title{
       font-size: 25px;
       line-height: 1.8rem;

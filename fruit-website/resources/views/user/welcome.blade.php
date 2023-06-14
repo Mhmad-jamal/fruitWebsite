@@ -190,7 +190,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
-            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 18rem;">
  
               <div class="inline-elements d-flex justify-content-beteween" >
                 <h5>Article</h5>
@@ -203,7 +203,7 @@
           </div>
 
           <div class="col-lg-4 d-none d-lg-block">
-            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 18rem;">
  
               <div class="inline-elements d-flex justify-content-beteween" >
                 <h5>Article</h5>
@@ -216,7 +216,7 @@
           </div>
 
           <div class="col-lg-4 d-none d-lg-block">
-            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 18rem;">
  
               <div class="inline-elements d-flex justify-content-beteween" >
                 <h5>Article</h5>
@@ -235,8 +235,8 @@
     <div class="carousel-item carousel-item-next carousel-item-start">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
-            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+          <div class="col-lg-4 article">
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 18rem;">
  
               <div class="inline-elements d-flex justify-content-beteween" >
                 <h5>Article</h5>
@@ -248,8 +248,8 @@
                 </div>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
-            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+          <div class="col-lg-4 article d-none d-lg-block">
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 18rem;">
  
               <div class="inline-elements d-flex justify-content-beteween" >
                 <h5>Article</h5>
@@ -261,8 +261,8 @@
                 </div>
           </div>
 
-          <div class="col-lg-4 d-none d-lg-block">
-            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 25rem;">
+          <div class="col-lg-4 article d-none d-lg-block">
+            <div class="card text-center mb-3 ml-3 articleCard" id="CenterdArticleCard" style="width: 18rem;">
  
               <div class="inline-elements d-flex justify-content-beteween" >
                 <h5>Article</h5>

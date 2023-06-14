@@ -22,3 +22,41 @@
     z-index: 45;
     transform: translateY(55px);
 }
+#btndiv{
+
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+@media only screen and (max-width: 767px) {
+ 
+#imgContainer{
+    display: flex;
+    justify-content: center;
+}
+.col-md-3,.col-md-2,.col-md-4{
+    display: flex;
+    justify-content: center!important;    
+    margin-top: 10%!important;
+}
+.img-fluid {
+  max-width: 30%!important;  
+}
+#img{
+    
+    position: relative!important;
+}
+
+  }
+  #img{
+    position: absolute;
+    margin-left: -10%;  }
+    #titlediv{
+       
+        padding-left: 15%;
+       
+    }
+    #title{
+        color: #8b48e5;
+        font-size: 5rem;
+    }

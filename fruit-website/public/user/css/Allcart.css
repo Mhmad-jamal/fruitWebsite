@@ -1,0 +1,21 @@
+#container{
+    border-radius: 31px;
+    filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.16 ));
+    background: #8b48e5;
+    padding: 5%;
+}
+.discriptiondiv {
+    color: #8b48e5;
+}
+#Discription{
+    display: flex;
+    justify-content: space-around;
+}
+.bg-white{
+    border-radius: 25px;
+}
+#title{
+    color: #8b48e5;
+    font-size: 5rem;
+    padding-left: 10%;
+}
