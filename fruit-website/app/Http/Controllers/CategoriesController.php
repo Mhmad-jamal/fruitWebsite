@@ -34,8 +34,13 @@ class CategoriesController extends Controller
      public function store(Request $request)
      {
          // Validation code and logic to store the category
-     
+
          // Image upload logic
+         $validatedData = $request->validate([
+            'Category_Name' => 'required|unique:categories',
+            'Category_Details' => 'required',
+            'Category_Image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
          if ($request->hasFile('Category_Image')) {
              $image = $request->file('Category_Image');
              $imagePath = $image->store('category_images', 'public');
@@ -56,31 +61,99 @@ class CategoriesController extends Controller
          // Redirect or return a response
      }
 
+     public function update(Request $request)
+{
+    $id=$request->input('id');
+    // Validation code and logic to update the category
+    $validatedData = $request->validate([
+        'Category_Name' => 'required',
+        'Category_Details' => 'required',
+        'Category_Image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
+    // Image upload logic
+    if ($request->hasFile('Category_Image')) {
+        $image = $request->file('Category_Image');
+        $imagePath = $image->store('category_images', 'public');
+        $category = Category::find($id);
+        if ($category) {
+            $category->category_name = $request->input('Category_Name');
+            $category->category_description = $request->input('Category_Details');
+            $category->category_image = $imagePath;
+            $category->save();
+    
+            Alert::success('Categories', 'Category Success Update');
+            return Redirect::route('category.edit', $id);
+        } 
+    } else {
+        $category = Category::find($id);
+        if ($category) {
+            $category->category_name = $request->input('Category_Name');
+            $category->category_description = $request->input('Category_Details');
+            $category->save();
+    
+            Alert::success('Categories', 'Category Success Update');
+            return Redirect::route('category.edit', $id);
+        }     }
+
+    // Example code to update the category
+   
+
+}
+public function delete($id)
+{
+
+    $categories = Category::all();
+
+    $category = Category::find($id);
+  
+    
+        if ($category) {
+            $category->delete();
+            Alert::success('Categories', 'Category Successfully Deleted');
+            return back();
+        } else {
+            Alert::error('Categories', 'Category Not found');
+            return back();
+        }
+    
+        
+    
+        // Handle the case where the category with the specified $id is not found
+        
+    
+}
     /**
      * Display the specified resource.
      */
-    public function show()
+     public function allCategories()
     {
         $categories = Category::all();
-        return view('admin.Categories.Show_categories', ['categories' => $categories]);
+        return view('admin.Categories.Show_All_categories', ['categories' => $categories]);
         //
-    }
+    } 
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function show($id)
     {
+        $category = Category::where('id', $id)->first();
+
+        return view('admin.Categories.Show_category', ['category' => $category]);
+
+    }
+    public function edit($id)
+    {
+        $category = Category::where('id', $id)->first();
+        return view('admin.Categories.Edit_category', ['category' => $category]);
+
         //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+   
 
     /**
      * Remove the specified resource from storage.

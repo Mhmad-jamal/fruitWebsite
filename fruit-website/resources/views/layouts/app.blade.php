@@ -100,6 +100,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('about')}}">About</a>
                         </li>
+                        
+                            
+                        @auth
+                        <li class="nav-item">
+                            <a href="{{route('Allcart')}}">
+                                <i class="fas fa-shopping-cart fa-lg mr-2 " style="color: #8b48e5;font-size: 35px;
+                                margin-left: 200px;
+                                margin-top: 1.7rem;"></i>
+                                </a>
+                        </li>      
+                        @endauth
+                      
                     </ul>
                     <span class="navbar-text" id="LoginSpan">
                         @guest
@@ -113,25 +125,32 @@
                                         class="loginBtn">{{ __('Register') }}</button> </a>
                             @endif
                         @else
-                            <li class="nav-item dropdown list-unstyled" >
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle loginBtn" href="#" 
-                                    role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                                    v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
 
-                                <div class="dropdown-menu bg-none border-0" id="cutsome-drop-douwn" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item loginBtn" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                           document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                    
+                   
+                     <li class="nav-item dropdown list-unstyled" >
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle loginBtn" href="#" 
+                            role="button" style="font-size: 12px" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            v-pre >
+                            {{ Auth::user()->name }}
+                        </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
+                        <div class="dropdown-menu bg-none border-0" id="cutsome-drop-douwn" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item loginBtn" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                   document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+                            @if (auth()->user()->role == 'admin')
+    <a class="dropdown-item loginBtn mt-3" href="{{ route('dashboard') }}">
+        Dashboard
+    </a>
+@endif
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
                         @endguest
                     </span>
 
@@ -174,7 +193,7 @@
                                 </li>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
+                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -192,7 +211,9 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                            </li> 
+                            
+                            
                         @endguest
                     </ul>
                 </div>

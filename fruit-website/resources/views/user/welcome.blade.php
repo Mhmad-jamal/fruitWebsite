@@ -12,7 +12,7 @@
                 professionalisme s’allie avec passion. Depuis plus de 5 ans maintenant, j’exerce mon métier avec Où
                 professionalisme s’allie avec passion. Depuis plus de 5 ans maintenant, j’exerce mon métier avec j’exerce
                 mon métier avec la passion qui m’anime : capturer l’essence de chaque instant.</p>
-            <button id="orderbtn">order now </button>
+            <a href="{{route('Store')}}"><button id="orderbtn">order now </button></a>
         </div>
     </section>
     <section class="container mt-5 ">

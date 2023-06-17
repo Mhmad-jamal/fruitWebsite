@@ -18,7 +18,7 @@
               <h5 class="card-title">Card title</h5>
               <p class="card-text">5 $</p>
               <div style=" margin-bottom: 5%;" class="circle-icon bg-white text-black d-flex align-items-center justify-content-center icon">
-                <i class="fas fa-plus">+</i>
+                <i class="fas fa-plus"></i>
             </div>
                       </a>
             </div>
@@ -31,7 +31,7 @@
             <h5 class="card-title">Card title</h5>
             <p class="card-text">5 $</p>
             <div style=" margin-bottom: 5%;" class="circle-icon bg-white text-black d-flex align-items-center justify-content-center icon">
-              <i class="fas fa-plus">+</i>
+              <i class="fas fa-plus"></i>
           </div>
                     </a>
           </div>
@@ -44,7 +44,7 @@
           <h5 class="card-title">Card title</h5>
           <p class="card-text">5 $</p>
           <div style=" margin-bottom: 5%;" class="circle-icon bg-white text-black d-flex align-items-center justify-content-center icon">
-            <i class="fas fa-plus">+</i>
+            <i class="fas fa-plus"></i>
         </div>
                   </a>
         </div>

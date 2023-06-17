@@ -5,15 +5,16 @@
 
 <div class="row d-flex justify-content-center">
    
-    <div class="col-8">
+    <div class="col-11">
       <div class="card mb-4">
         <div class="card-header d-flex justify-content-between align-items-center">
-          <h5 class="mb-0">Add New Category</h5>
+          <h5 class="mb-0"> Edit  Category </h5>
           <small class="text-muted float-end"></small>
         </div>
         <div class="card-body">
-          <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
+          <form action="{{ route('categories.update') }}" method="POST" enctype="multipart/form-data">
             @csrf
+            <input type="hidden" name="id" value="{{ $category->id }}">
             <div class="mb-3">
                 <label class="form-label" for="basic-icon-default-fullname">Category Name</label>
                 <div class="input-group input-group-merge">
@@ -25,8 +26,9 @@
                             </path>
                         </svg>
                     </span>
-                    <input type="text" class="form-control" required name="Category_Name" id="basic-icon-default-fullname"
-                        placeholder="Apple" aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
+                    <input type="text" class="form-control p-1" required name="Category_Name"
+                        id="basic-icon-default-fullname" value="{{ $category->category_name }}" aria-label="JApple"
+                        aria-describedby="basic-icon-default-fullname2">
                 </div>
                 @error('Category_Name')
                     <div class="text-danger">{{ $message }}</div>
@@ -44,9 +46,9 @@
                             <path d="M8 12H6a6 6 0 0 1 6-6v2a4 4 0 0 0-4 4z"></path>
                         </svg>
                     </span>
-                    <input type="text" id="basic-icon-default-company" required name="Category_Details" class="form-control"
-                        placeholder="Category Details." aria-label="Category Details."
-                        aria-describedby="basic-icon-default-company2">
+                    <textarea type="text" id="basic-icon-default-company" required name="Category_Details"
+                        class="form-control p-1" aria-label="Category Details." aria-describedby="basic-icon-default-company2">{{ $category->category_description }}
+                    </textarea>
                 </div>
                 @error('Category_Details')
                     <div class="text-danger">{{ $message }}</div>
@@ -61,16 +63,29 @@
                             <path
                                 d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19V5h14l.002 14H5z">
                             </path>
-                            <path d="m10 14-1-1-3 4h12l-5-7z"></path>
+                            <path
+                                d="m10 14-1-1-3 4h12l-5-7z">
+                            </path>
                         </svg>
                     </span>
-                    <input type="file" class="form-control" required name="Category_Image" id="fileInput">
+                    <input type="file" class="form-control" name="Category_Image" id="fileInput">
                 </div>
                 @error('Category_Image')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary CustomebBtn">Add</button>
+        
+        
+            <div class="input-group input-group-merge">
+                <img style="max-width: 25%; max-height: 25%;" src="{{ asset('storage/' . $category->category_image) }}"
+                    class="img-thumbnail" alt="Image">
+            </div>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary CustomebBtn">Update</button>
+        </div>
+        
+        
         </form>
         
         </div>

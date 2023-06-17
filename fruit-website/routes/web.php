@@ -75,10 +75,13 @@ Route::middleware(['CheckRole:admin'])->group(function () {
         })->name('categories.add');
         Route::post('/categories', [CategoriesController::class, 'store'])->name('categories.store');
 
-        
-            Route::get('/categories/Show', [CategoriesController::class, 'Show'])->name('categories.Show');
+            Route::post('/category/update', [CategoriesController::class, 'update'])->name('categories.update');
+            
+            Route::get('/categories/allCategories', [CategoriesController::class, 'allCategories'])->name('categories.allCategories');
+            Route::get('/category/show/{id}', [CategoriesController::class, 'show'])->name('category.show');
+            Route::get('/category/edit/{id}', [CategoriesController::class, 'edit'])->name('category.edit');
 
-
+            Route::any('/category/delete/{id}', [CategoriesController::class, 'delete'])->name('category.delete');
 
 });
 
