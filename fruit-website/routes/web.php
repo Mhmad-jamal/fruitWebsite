@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckRole;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Article;
-
+use App\Models\Category;
 
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Redirect;
@@ -82,6 +82,18 @@ Route::middleware(['CheckRole:admin'])->group(function () {
             Route::get('/category/edit/{id}', [CategoriesController::class, 'edit'])->name('category.edit');
 
             Route::any('/category/delete/{id}', [CategoriesController::class, 'delete'])->name('category.delete');
+/* end Categories route */
+
+
+Route::any('/Product/add', function () {
+    $categories = Category::all();
+
+    return view('admin.Product.Add_Product')->with('categories', $categories);
+})->name('Product.add');
+/* Product route */
+
+
+/*end  Product route */
 
 });
 

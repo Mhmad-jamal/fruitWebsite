@@ -109,7 +109,7 @@
   
                 <ul class="menu-sub">
                   <li class="menu-item">
-                    <a href="" class="menu-link">
+                    <a href="{{route('Product.add')}}" class="menu-link">
                       <div data-i18n="Without menu">Add New Products</div>
                     </a>
                   </li>
