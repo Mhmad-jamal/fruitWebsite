@@ -69,6 +69,54 @@
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="defaultInput" class="form-label">One Time Price</label>
+                    <input id="defaultInput" class="form-control" name="One_Time_Price" type="text" placeholder="100 $">
+                     
+                </div>
+            
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="" class="form-label"> One Time Point</label>
+                    <input id="" class="form-control" name="One_Time_Price" type="text" placeholder="100">
+                  </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="" class="form-label">Weekly Price</label>
+                    <input id="" class="form-control" name="Weekly_Price" type="text" placeholder="100 $">
+                     
+                </div>
+            
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="" class="form-label"> Weekly Point</label>
+                    <input id="" class="form-control" name="Weekly_Point" type="text" placeholder="100">
+                  </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="" class="form-label">Monthly Price</label>
+                    <input id="" class="form-control" name="Monthly_Price" type="text" placeholder="100 $">
+                     
+                </div>
+            
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="" class="form-label"> Monthly Point</label>
+                    <input id="" class="form-control" name="Monthly_Point" type="text" placeholder="100">
+                  </div>
+            </div>
+          </div>
             <div class="mb-3">
                 <label class="form-label" for="basic-icon-default-email">Product Image</label>
                 <div class="input-group input-group-merge">
