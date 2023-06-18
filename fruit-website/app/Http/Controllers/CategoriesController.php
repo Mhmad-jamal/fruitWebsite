@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
-use App\Models\Category;
 use Illuminate\Support\Facades\Redirect;
+
+use App\Models\Category;
 
 class CategoriesController extends Controller
 {

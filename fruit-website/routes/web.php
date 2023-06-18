@@ -91,6 +91,9 @@ Route::any('/Product/add', function () {
     return view('admin.Product.Add_Product')->with('categories', $categories);
 })->name('Product.add');
 /* Product route */
+Route::post('/porduct/store', [ProductController::class, 'store'])->name('product.store');
+Route::get('/Product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+Route::post('/product/update', [ProductController::class, 'update'])->name('product.update');
 
 
 /*end  Product route */

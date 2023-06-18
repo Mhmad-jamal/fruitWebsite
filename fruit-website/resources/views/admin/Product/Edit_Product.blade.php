@@ -12,8 +12,9 @@
           <small class="text-muted float-end"></small>
         </div>
         <div class="card-body">
-           <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+           <form action="{{ route('product.update') }}" method="POST" enctype="multipart/form-data">
              @csrf
+             <input type="hidden" name="id" value="{{$product->id}}">
  <div class="mb-3">
     <label class="form-label" for="basic-icon-default-fullname">Category Name</label>
     <div class="input-group input-group-merge">
@@ -43,7 +44,7 @@
                         </svg>
                     </span>
                     <input type="text" class="form-control" required name="Product_Name" id="basic-icon-default-fullname"
-                        placeholder="" value="{{$product->Product_Name}}" aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
+                    value="{{$product->Product_Name}}"   placeholder="Apple" aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
                 </div>
                 @error('Product_Name')
                     <div class="text-danger">{{ $message }}</div>
@@ -61,7 +62,7 @@
                             <path d="M8 12H6a6 6 0 0 1 6-6v2a4 4 0 0 0-4 4z"></path>
                         </svg>
                     </span>
-                    <input type="text" id="basic-icon-default-company" required name="Product_Details" class="form-control"
+                    <input type="text" id="basic-icon-default-company" value="{{$product->product_petails}}" required name="Product_Details" class="form-control"
                         placeholder="Product Details." aria-label="Product Details."
                         aria-describedby="basic-icon-default-company2">
                 </div>
