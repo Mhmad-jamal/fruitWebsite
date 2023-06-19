@@ -99,7 +99,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="defaultInput" class="form-label">One Time Price</label>
-                    <input id="defaultInput" class="form-control" value="{{$product->One_Time_Price}}" name="One_Time_Price" type="text" placeholder="100 $">
+                    <input id="defaultInput" class="form-control" value="{{$product->one_time_price}}" name="One_Time_Price" type="text" >
                      
                 </div>
             
@@ -107,7 +107,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label"> One Time Point</label>
-                    <input id="" class="form-control" name="One_Time_Point" type="text" placeholder="100">
+                    <input id="" class="form-control" name="One_Time_Point" value="{{$product->one_time_point}}" type="text" placeholder="100">
                   </div>
             </div>
           </div>
@@ -115,7 +115,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label">Weekly Price</label>
-                    <input id="" class="form-control" name="Weekly_Price" type="text" placeholder="100 $">
+                    <input id="" class="form-control" name="Weekly_Price" type="text" placeholder="" value="{{$product->weekly_price}}">
                      
                 </div>
             
@@ -123,7 +123,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label"> Weekly Point</label>
-                    <input id="" class="form-control" name="Weekly_Point" type="text" placeholder="100">
+                    <input id="" class="form-control" name="Weekly_Point" value="{{$product->weekly_point}}" type="text" placeholder="100">
                   </div>
             </div>
           </div>
@@ -131,7 +131,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label">Monthly Price</label>
-                    <input id="" class="form-control" name="Monthly_Price" type="text" placeholder="100 $">
+                    <input id="" class="form-control" value="{{$product->monthly_price}}" name="Monthly_Price" type="text" >
                      
                 </div>
             
@@ -139,7 +139,14 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label"> Monthly Point</label>
-                    <input id="" class="form-control" name="Monthly_Point" type="text" placeholder="100">
+                    <input id="" class="form-control" name="Monthly_Point" value="{{$product->monthly_point}}" type="text" >
+                  </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <img class="img-thumbnail" src="{{asset('storage/'.$product->product_image)}}">
                   </div>
             </div>
           </div>
