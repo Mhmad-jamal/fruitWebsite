@@ -23,7 +23,13 @@
             placeholder="" aria-label="" aria-describedby="basic-icon-default-fullname2">
             <option disabled>Select category</option>
             @foreach ($categories as $category )
-            <option value="{{$category->id}}">{{$category->category_name}}</option>
+            @if ($product->id==$category->id)
+            <option selected value="{{$category->id}}">{{$category->category_name}}</option>
+
+                        @endif
+                        <option  value="{{$category->id}}">{{$category->category_name}}</option>
+
+
             @endforeach
 
         </select>
@@ -44,7 +50,7 @@
                         </svg>
                     </span>
                     <input type="text" class="form-control" required name="Product_Name" id="basic-icon-default-fullname"
-                    value="{{$product->Product_Name}}"   placeholder="Apple" aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
+                    value="{{$product->product_name}}"    aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
                 </div>
                 @error('Product_Name')
                     <div class="text-danger">{{ $message }}</div>
@@ -62,7 +68,7 @@
                             <path d="M8 12H6a6 6 0 0 1 6-6v2a4 4 0 0 0-4 4z"></path>
                         </svg>
                     </span>
-                    <input type="text" id="basic-icon-default-company" value="{{$product->product_petails}}" required name="Product_Details" class="form-control"
+                    <input type="text" id="basic-icon-default-company" value="{{$product->product_details}}" required name="Product_Details" class="form-control"
                         placeholder="Product Details." aria-label="Product Details."
                         aria-describedby="basic-icon-default-company2">
                 </div>
@@ -81,7 +87,7 @@
                         </path>
                     </svg>
                     </span>
-                    <input type="text" id="basic-icon-default-company" required name="Product_Contain" class="form-control"
+                    <input type="text" id="basic-icon-default-company" value="{{$product->product_contain}}" required name="Product_Contain" class="form-control"
                         placeholder="Apple-Mango-bannana" aria-label="Apple-Mango-bannana"
                         aria-describedby="basic-icon-default-company2">
                 </div>
@@ -93,7 +99,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="defaultInput" class="form-label">One Time Price</label>
-                    <input id="defaultInput" class="form-control" name="One_Time_Price" type="text" placeholder="100 $">
+                    <input id="defaultInput" class="form-control" value="{{$product->One_Time_Price}}" name="One_Time_Price" type="text" placeholder="100 $">
                      
                 </div>
             

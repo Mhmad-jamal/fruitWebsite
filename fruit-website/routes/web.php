@@ -5,6 +5,7 @@ use App\Http\Middleware\CheckRole;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Article;
 use App\Models\Category;
+use App\Models\Product;
 
 use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Redirect;
@@ -90,8 +91,17 @@ Route::any('/Product/add', function () {
 
     return view('admin.Product.Add_Product')->with('categories', $categories);
 })->name('Product.add');
+Route::any('/Product/all', function () {
+    $categories = Category::all();
+    $products = Product::join('categories', 'categories.id', '=', 'products.category_id')
+    ->select('products.*', 'categories.category_name as category_name')
+    ->get();
+    return view('admin.Product.View_all')->with('products', $products);
+})->name('Product.View_all');
+
 /* Product route */
 Route::post('/porduct/store', [ProductController::class, 'store'])->name('product.store');
+
 Route::get('/Product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
 Route::post('/product/update', [ProductController::class, 'update'])->name('product.update');
 

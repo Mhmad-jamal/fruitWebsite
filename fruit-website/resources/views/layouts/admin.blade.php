@@ -104,7 +104,7 @@
               <li class="menu-item {{ Request::is('Products*') ? 'active' : '' }}" style="">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-cube-alt"></i>         
-                           <div data-i18n="Layouts">Products </div>
+                           <div data-i18n="Layouts"> Products </div>
                 </a>
   
                 <ul class="menu-sub">
@@ -114,8 +114,8 @@
                     </a>
                   </li>
                   <li class="menu-item">
-                    <a href="" class="menu-link">
-                      <div data-i18n="Without navbar">Product</div>
+                    <a href="{{route('Product.View_all')}}" class="menu-link">
+                      <div data-i18n="Without navbar">All Product</div>
                     </a>
                   </li>
                  

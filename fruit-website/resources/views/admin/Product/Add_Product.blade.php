@@ -43,7 +43,7 @@
                         </svg>
                     </span>
                     <input type="text" class="form-control" required name="Product_Name" id="basic-icon-default-fullname"
-                        placeholder="" value="{{$product->Product_Name}}" aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
+                        placeholder="" value="" aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
                 </div>
                 @error('Product_Name')
                     <div class="text-danger">{{ $message }}</div>
