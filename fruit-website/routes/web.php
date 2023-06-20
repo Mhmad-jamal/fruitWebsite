@@ -91,13 +91,13 @@ Route::any('/Product/add', function () {
 
     return view('admin.Product.Add_Product')->with('categories', $categories);
 })->name('Product.add');
-Route::get('/Product/all', function () {
+Route::any('/Product/all', function () {
     $categories = Category::all();
     $products = Product::join('categories', 'categories.id', '=', 'products.category_id')
-        ->select('products.*', 'categories.category_name as category_name')
-        ->paginate(10);
-
-    return view('admin.Product.View_all', compact('products'));
+    ->select('products.*', 'categories.category_name as category_name')
+    ->get();
+    
+    return view('admin.Product.View_all')->with('products', $products);
 })->name('Product.View_all');
 
 /* Product route */
