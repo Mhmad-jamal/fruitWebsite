@@ -12,14 +12,13 @@
           <small class="text-muted float-end"></small>
         </div>
         <div class="card-body">
-           <form action="{{ route('product.update') }}" method="POST" enctype="multipart/form-data">
              @csrf
-             <input type="hidden" name="id" value="{{$product->id}}">
+             <input disabled  type="hidden" name="id" value="{{$product->id}}">
  <div class="mb-3">
     <label class="form-label" for="basic-icon-default-fullname">Category Name</label>
     <div class="input-group input-group-merge">
         
-        <select  class="form-control" required name="Category_id" id="basic-icon-default-fullname"
+        <select disabled  class="form-control" required name="Category_id" id="basic-icon-default-fullname"
             placeholder="" aria-label="" aria-describedby="basic-icon-default-fullname2">
             <option disabled>Select category</option>
             @foreach ($categories as $category )
@@ -49,7 +48,7 @@
                             </path>
                         </svg>
                     </span>
-                    <input type="text" class="form-control" required name="Product_Name" id="basic-icon-default-fullname"
+                    <input disabled  type="text" class="form-control" required name="Product_Name" id="basic-icon-default-fullname"
                     value="{{$product->product_name}}"    aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
                 </div>
                 @error('Product_Name')
@@ -68,7 +67,7 @@
                             <path d="M8 12H6a6 6 0 0 1 6-6v2a4 4 0 0 0-4 4z"></path>
                         </svg>
                     </span>
-                    <input type="text" id="basic-icon-default-company" value="{{$product->product_details}}" required name="Product_Details" class="form-control"
+                    <input disabled  type="text" id="basic-icon-default-company" value="{{$product->product_details}}" required name="Product_Details" class="form-control"
                         placeholder="Product Details." aria-label="Product Details."
                         aria-describedby="basic-icon-default-company2">
                 </div>
@@ -87,7 +86,7 @@
                         </path>
                     </svg>
                     </span>
-                    <input type="text" id="basic-icon-default-company" value="{{$product->product_contain}}" required name="Product_Contain" class="form-control"
+                    <input disabled  type="text" id="basic-icon-default-company" value="{{$product->product_contain}}" required name="Product_Contain" class="form-control"
                         placeholder="Apple-Mango-bannana" aria-label="Apple-Mango-bannana"
                         aria-describedby="basic-icon-default-company2">
                 </div>
@@ -99,7 +98,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="defaultInput" class="form-label">One Time Price</label>
-                    <input id="defaultInput" class="form-control" value="{{$product->one_time_price}}" name="One_Time_Price" type="text" >
+                    <input disabled  id="defaultInput" class="form-control" value="{{$product->one_time_price}}" name="One_Time_Price" type="text" >
                      
                 </div>
             
@@ -107,7 +106,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label"> One Time Point</label>
-                    <input id="" class="form-control" name="One_Time_Point" value="{{$product->one_time_point}}" type="text" placeholder="100">
+                    <input disabled  id="" class="form-control" name="One_Time_Point" value="{{$product->one_time_point}}" type="text" placeholder="100">
                   </div>
             </div>
           </div>
@@ -115,7 +114,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label">Weekly Price</label>
-                    <input id="" class="form-control" name="Weekly_Price" type="text" placeholder="" value="{{$product->weekly_price}}">
+                    <input disabled  id="" class="form-control" name="Weekly_Price" type="text" placeholder="" value="{{$product->weekly_price}}">
                      
                 </div>
             
@@ -123,7 +122,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label"> Weekly Point</label>
-                    <input id="" class="form-control" name="Weekly_Point" value="{{$product->weekly_point}}" type="text" placeholder="100">
+                    <input disabled  id="" class="form-control" name="Weekly_Point" value="{{$product->weekly_point}}" type="text" placeholder="100">
                   </div>
             </div>
           </div>
@@ -131,7 +130,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label">Monthly Price</label>
-                    <input id="" class="form-control" value="{{$product->monthly_price}}" name="Monthly_Price" type="text" >
+                    <input disabled  id="" class="form-control" value="{{$product->monthly_price}}" name="Monthly_Price" type="text" >
                      
                 </div>
             
@@ -139,7 +138,7 @@
             <div class="col-md-6">
                 <div class="mb-3">
                     <label for="" class="form-label"> Monthly Point</label>
-                    <input id="" class="form-control" name="Monthly_Point" value="{{$product->monthly_point}}" type="text" >
+                    <input disabled  id="" class="form-control" name="Monthly_Point" value="{{$product->monthly_point}}" type="text" >
                   </div>
             </div>
           </div>
@@ -150,26 +149,7 @@
                   </div>
             </div>
           </div>
-            <div class="mb-3">
-                <label class="form-label" for="basic-icon-default-email">Product Image</label>
-                <div class="input-group input-group-merge">
-                    <span class="input-group-text">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
-                            <path
-                                d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM5 19V5h14l.002 14H5z">
-                            </path>
-                            <path d="m10 14-1-1-3 4h12l-5-7z"></path>
-                        </svg>
-                    </span>
-                    <input type="file" class="form-control"  name="Product_Image" id="fileInput">
-                </div>
-                @error('Product_Image')
-                    <div class="text-danger">{{ $message }}</div>
-                @enderror
-            </div>
-            <button type="submit" class="btn btn-primary CustomebBtn">Edit</button>
-        </form>
+         
         
         </div>
       </div>

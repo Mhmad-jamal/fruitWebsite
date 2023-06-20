@@ -29,6 +29,8 @@ class LoginController extends Controller
         if (auth()->user()->role == 'admin') {
             return route('dashboard');
             
+        }else {
+            return route('welcome');
         }
 
         return $this->redirectTo;

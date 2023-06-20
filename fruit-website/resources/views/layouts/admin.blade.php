@@ -42,7 +42,8 @@
 
     <!-- Helpers -->
     <script src="{{ asset('admin/assets/vendor/js/helpers.js') }}"></script>
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+  
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
@@ -261,3 +262,5 @@
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <script src="{{ asset('vendor/sweetalert/sweetalert.min.js') }}"></script>
+
+

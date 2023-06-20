@@ -33,7 +33,43 @@ class ProductController extends Controller
 
         return view('admin.Product.Edit_Product', ['product' => $product,'categories'=>$categories]);
     }
+    public function delete($id)
+    {
+        // Retrieve the product from the database
+        $product = Product::find($id);
     
+        // Check if the product exists
+        if (!$product) {
+            // Product not found, handle the error (e.g., redirect back with an error message)
+            return redirect()->back()->with('error', 'Product not found.');
+        }
+    
+        // Delete the product
+        $product->delete();
+    
+        // Set a success message (e.g., using a package like 'laravel-sweetalert')
+        Alert::success('Product', 'Product successfully deleted!');
+    
+        // Redirect back to the previous page
+        return redirect()->back();
+    }
+    
+    public function view($id)
+    {
+        // Retrieve the product from the database
+        $product = Product::find($id);
+    
+        // Check if the product exists
+        if (!$product) {
+            // Product not found, handle the error (e.g., redirect back with an error message)
+            return redirect()->back()->with('error', 'Product not found.');
+        }
+    
+        // Pass the product data to the view
+        $categories = Category::all();
+
+        return view('admin.Product.Details_Product', ['product' => $product,'categories'=>$categories]);
+    }
     public function store(Request $request)
 {
     // Validate the request data
@@ -81,8 +117,9 @@ class ProductController extends Controller
     // Redirect back to the previous page
     return redirect()->back();
 }
-public function update(Request $request, $id)
+public function update(Request $request)
 {
+    $id=$request->input('id');
     // Validate the request data
     $validator = Validator::make($request->all(), [
         'Category_id' => 'required|exists:categories,id',
