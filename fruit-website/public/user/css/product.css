@@ -48,7 +48,7 @@ background: #8b48e5
     position:relative;
     height:80%;
     width:50%;
-    text-align:center;
+    text-align:left;
     border-radius:9999px;
     line-height:400%;
     font-weight:900;
@@ -132,4 +132,10 @@ h2{
 }
 .description{
     text-align: left;
+}
+.color-white{
+    color:#fff!important ;
+}
+.fas{
+cursor: pointer;
 }

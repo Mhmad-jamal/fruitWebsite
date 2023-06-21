@@ -16,7 +16,7 @@
 }
 .containerCategory{
     max-width: 250px!important;
-max-height: 400px!important;
+max-height: 450px!important;
 
 border-radius: 47px;
 
@@ -61,3 +61,14 @@ text-decoration: none;
  .containerCategory:hover{
     transform: scale(1.1);
  }
+ .customP{
+    min-height: 140px;
+ }
+ .title{
+    font-size: 1.3rem;
+ }
+ .image-top-center {
+    width: 100%!important;
+    height: 200px!important; /* Adjust the height as desired */
+    object-fit: cover!important;
+  }

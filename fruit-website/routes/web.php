@@ -8,7 +8,10 @@ use App\Models\Category;
 use App\Models\Product;
 
 use App\Http\Controllers\CategoriesController;
+use App\Models\Cart;
 use Illuminate\Support\Facades\Redirect;
+use App\Http\Controllers\CartController;
+
 
 
 /*
@@ -61,7 +64,11 @@ Route::get('/gift', function () {
 })->name('gift');
 //Store
 Route::get('/Store', function () {
-    return view('user.Store');
+    // Retrieve products from the database
+    $products = Product::all();
+
+    // Pass the products to the "user.Store" view
+    return view('user.Store', ['products' => $products]);
 })->name('Store');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('product');
 
@@ -114,4 +121,12 @@ Route::post('/product/update', [ProductController::class, 'update'])->name('prod
 });
 
 Route::middleware(['CheckRole:' . 'admin' . '!' . 'user'])->group(function () {
+});
+
+
+/// user login route 
+Route::middleware('auth')->group(function () {
+    // Protected routes for authenticated users
+    Route::post('/cart/add', [CartController::class, 'create'])->name('cart.create');
+
 });
