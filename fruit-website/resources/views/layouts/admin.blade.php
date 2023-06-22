@@ -125,7 +125,24 @@
                 </ul>
               </li>
   
-              
+              <li class="menu-item" style="">
+                <a href="javascript:void(0)" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-copy"></i>
+                  <div data-i18n="Extended UI">Gift Card</div>
+                </a>
+                <ul class="menu-sub">
+                  <li class="menu-item">
+                    <a href="{{route('Gift.add')}}" class="menu-link">
+                      <div data-i18n="Perfect Scrollbar">Add New Gift</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="{{route('Gift.View_all')}}" class="menu-link">
+                      <div data-i18n="Text Divider">All Gift</div>
+                    </a>
+                  </li>
+                </ul>
+              </li>
             </ul>
           </aside>
           <!-- / Menu -->

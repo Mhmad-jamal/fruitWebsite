@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
+
 use App\Models\Product;
 use App\Models\Category;
 
-
+use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Validator;
 
 class ProductController extends Controller

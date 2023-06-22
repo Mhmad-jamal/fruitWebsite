@@ -6,11 +6,15 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Article;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Gift;
+
 
 use App\Http\Controllers\CategoriesController;
 use App\Models\Cart;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\GiftController;
+
 
 
 
@@ -96,6 +100,10 @@ Route::any('/Product/add', function () {
 
     return view('admin.Product.Add_Product')->with('categories', $categories);
 })->name('Product.add');
+Route::any('/Gift/add', function () {
+
+    return view('admin.Gift.Add_Gift');
+})->name('Gift.add');
 Route::any('/Product/all', function () {
     $categories = Category::all();
     $products = Product::join('categories', 'categories.id', '=', 'products.category_id')
@@ -104,9 +112,19 @@ Route::any('/Product/all', function () {
     
     return view('admin.Product.View_all')->with('products', $products);
 })->name('Product.View_all');
+Route::any('/Gift/all', function () {
+    $Gifts = Gift::all();
+ 
+    
+    return view('admin.Gift.View_all')->with('Gifts', $Gifts);
+})->name('Gift.View_all');
+
+Route::get('/Gift/view/{id}', [GiftController::class, 'view'])->name('gift.details');
 
 /* Product route */
 Route::post('/porduct/store', [ProductController::class, 'store'])->name('product.store');
+Route::post('/Gift/store', [GiftController::class, 'store'])->name('Gift.store');
+
 Route::get('/Product/view/{id}', [ProductController::class, 'view'])->name('product.details');
 Route::get('/Product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
 
