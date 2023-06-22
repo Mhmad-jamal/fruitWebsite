@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('plan');
             $table->double('plan_price');
             $table->integer('plan_point');
+            $table->integer('quantity');
+            $table->double('total_price');
             $table->integer('status')->default(0);
 
             $table->timestamps();

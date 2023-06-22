@@ -4,14 +4,15 @@
     <link rel="stylesheet" href="{{ asset('user/css/product.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+<script src="
+"></script>
     <section class="container-fluid d-flex justify-content-center mb-3 " id="customediv">
 
         <div class="row" id="customRow">
             <div class="row mb-3">
                 <div class="col-md-12">
                     <div class="circle-container d-flex justify-content-start">
-                        <h1 id="title" class="display- font-weight-bold"> Basket details</h1>
+                        <h1 id="title" class="display- font-weight-bold">Basket details</h1>
                     </div>
                 </div>
             </div>
@@ -65,19 +66,22 @@
                                         @endif
                                     </div>
                                 </div>
+                                <form action="{{route('cart.create')}}" method="POST">
+                                  @csrf
+                                  <input type="hidden" name="product_id" value="{{$product->id}}">
                                 <div class="selector-item" style="align-items: center; display: flex; justify-content: space-between; width: 100%;">
                                     <div style="display: flex; flex-direction: row; align-items: center; width: 100%;">
-                                      <input type="radio" id="radio1" data-point="{{ $product->one_time_point }}" value="{{ $product->one_time_price }}" name="selector" class="selector-item_radio" checked>
+                                      <input data-label="One Time" type="radio" id="radio1" data-point="{{ $product->one_time_point }}" value="{{ $product->one_time_price }}" name="selector" class="selector-item_radio" checked>
                                       <label for="radio1" class="selector-item_label">
                                         <h2>One Time</h2>
                                         <p class="text-left customeText">{{ $product->one_time_price }}</p>
                                       </label>
-                                      <input type="radio" id="radio2" name="selector" class="selector-item_radio" data-point="{{ $product->weekly_point }}" value="{{ $product->weekly_price }}">
+                                      <input data-label="weekly" type="radio" id="radio2" name="selector" class="selector-item_radio" data-point="{{ $product->weekly_point }}" value="{{ $product->weekly_price }}">
                                       <label for="radio2" class="selector-item_label">
                                         <h2>Weekly</h2>
                                         <p class="text-left customeText">{{ $product->weekly_price }}</p>
                                       </label>
-                                      <input type="radio" id="radio3" data-point="{{ $product->monthly_point }}" name="selector" class="selector-item_radio" value="{{ $product->monthly_price }}">
+                                      <input data-label="monthly" type="radio" id="radio3" data-point="{{ $product->monthly_point }}" name="selector" class="selector-item_radio" value="{{ $product->monthly_price }}">
                                       <label for="radio3" class="selector-item_label">
                                         <h2>Monthly</h2>
                                         <p class="text-left customeText">{{ $product->monthly_price }}</p>
@@ -85,6 +89,13 @@
                                       <input type="hidden" id="hiddenInput" name="selector" class="selector-item_radio">
                                     </div>
                                   </div>
+                                  <input type="hidden" name="plan_price" id="plan_price" value="{{$product->one_time_price }}">
+                                  <input type="hidden" name="plan_point" id="plan_point" value="{{$product->one_time_point }}">
+                                  <input type="hidden" name="total_price" id="total_price" value="{{$product->one_time_price}}">
+                                  <input type="hidden" name="plan" id="plan" value="one time">
+
+
+
 
 
 
@@ -115,6 +126,7 @@
                                           <i class="fas fa-minus"></i>
                                         </div>
                                       </div>
+                                      <input type="hidden" name="quantity" id="quantity" value="1">
                                     <label  class="color-white p">Point</label>
                                     <label  class="color-white p" id="Point"> {{$product->one_time_point}}
                                         <p class="text-center customeText"></p>
@@ -125,8 +137,8 @@
                                         <p class="text-center customeText"></p>
                                     </label>
 
-                                    <a href="{{ route('gift') }}" class="btn card-btn"
-                                        style="background: white; border-radius: 10px;width: 90%;"> Continue </a>
+                                    <button  class="btn card-btn"
+                                        style="background: white; border-radius: 10px;width: 90%;" type="submit"> Continue </button>
 
                                 </div>
 
@@ -137,6 +149,7 @@
 
                         </div>
                     </div>
+                  </form>
 
 
 
@@ -160,18 +173,40 @@ var counter = 1;
 function updateValues() {
   var selectedRadioButton = document.querySelector('input[name="selector"]:checked');
   var selectedValue = selectedRadioButton.value;
+  
+
   var selectedDataPoint = selectedRadioButton.getAttribute("data-point");
+ 
   var totalPrice = selectedValue * counter;
   var totalPoint = selectedDataPoint * counter;
+  document.getElementById("plan_price").value=selectedValue
+  document.getElementById("plan_point").value=totalPoint
+  document.getElementById("total_price").value=totalPrice
+
   
   priceLabel.textContent = totalPrice;
   dataPointLabel.textContent = totalPoint;
 }
 
+radioButtons.forEach((radio) => {
+  radio.addEventListener('change', () => {
+    const selectedLabel = document.querySelector(`label[for="${radio.id}"]`);
+    const selectedH2 = selectedLabel.querySelector('h2');
+    if (selectedH2) {
+      const h2Text = selectedH2.textContent;
+      console.log(h2Text);
+      document.getElementById("plan").value = h2Text;
+    }
+  });
+});
+
+
 // Function to increment the counter value
 function incrementCounter() {
   counter++;
   counterElement.textContent = counter;
+  document.getElementById("quantity").value=counter;
+
   updateValues();
 }
 
@@ -180,6 +215,7 @@ function decrementCounter() {
   if (counter > 1) {
     counter--;
     counterElement.textContent = counter;
+    document.getElementById("quantity").value=counter;
     updateValues();
   }
 }
@@ -207,4 +243,26 @@ updateValues();
   // Add event listener to each radio button
  
       </script>
+
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+
+</script>
+@if (Session::has('success'))
+<script>
+  swal("Product Added To Cart Successfully!", "", "success")
+    .then(() => {
+      window.location.href = "/gift";
+    });
+</script>
+@endif
+
+@if (Session::has('error'))
+<script>
+  swal("Sorry something wrong !", "", "erkror");
+ 
+ </script>
+    
+@endif
+
 @endsection
+

@@ -59,9 +59,7 @@ Route::get('/Payment', function () {
 Route::get('/basket', function () {
     return view('user.basket');
 })->name('basket');
-Route::get('/gift', function () {
-    return view('user.gift');
-})->name('gift');
+
 //Store
 Route::get('/Store', function () {
     // Retrieve products from the database
@@ -128,5 +126,8 @@ Route::middleware(['CheckRole:' . 'admin' . '!' . 'user'])->group(function () {
 Route::middleware('auth')->group(function () {
     // Protected routes for authenticated users
     Route::post('/cart/add', [CartController::class, 'create'])->name('cart.create');
+    Route::get('/gift', [CartController::class, 'createGift'])->name('gift');
+
+   
 
 });

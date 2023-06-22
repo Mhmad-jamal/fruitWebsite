@@ -15,6 +15,8 @@ class Cart extends Model
         'plan',
         'plan_price',
         'plan_point',
+        'quantity',
+        'total_price',
         'status',
     ];
 }
