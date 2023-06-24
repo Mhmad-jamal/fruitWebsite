@@ -85,7 +85,7 @@ public function StoreGift(Request $request) {
         ]);
         $userId = auth()->user()->id;
 
-  
+ 
 
         // If validation fails, redirect back with error messages
         if ($validator->fails()) {
@@ -108,6 +108,17 @@ public function StoreGift(Request $request) {
         Session::flash('success', 'Gift item created successfully.');
         return redirect()->back();
 
+}
+public function view() {
+    $userId = auth()->user()->id;
+
+    $Cart = Cart::join('products', 'Cart.product_id', '=', 'products.id')
+    ->where('Cart.user_id', $userId)
+    ->get(['Cart.*', 'products.*']);
+
+    return view('user.Allcart')->with('cart',$Cart);
+
+    
 }
     
     

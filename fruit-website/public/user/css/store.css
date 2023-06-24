@@ -69,6 +69,6 @@ text-decoration: none;
  }
  .image-top-center {
     width: 100%!important;
-    height: 200px!important; /* Adjust the height as desired */
+    height: 150px!important; /* Adjust the height as desired */
     object-fit: cover!important;
   }

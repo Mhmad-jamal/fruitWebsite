@@ -12,22 +12,25 @@
 </div>
 <div class="container" id="container">
  
+    @foreach ($cart as $item )
     <div class="row justify-content-center mt-3 bg-white">
-        <div class="col-md-4">
-            <img src="http://127.0.0.1:8000/user/main-img/Group-43.png" alt="Image 3" style="max-width: 35%" class="img-fluid ">
+        <div class="col-md-4 mt-5 d-flex justify-content-center">
+            <img src="{{asset('storage/'.$item->product_image)}}" alt="Image 3"  class="img-fluid " style="height: 150px">
         </div>
         <div class="col-md-4 discriptiondiv" >
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis condimentum malesuada arcu, non luctus nisi convallis non. Quisque vel tortor nec eros luctus gravida id non mauris.</p>
-            <h1>weekly</h1>
+            <h1>{{$item->product_name}}</h1>
+            <p>{{$item->product_details}}</p>
+            <h1>{{$item->plan}}</h1>
+            <p> Quantity :{{$item->quantity}}</p>
+
         </div>
         <div class="col-md-4"></div>
         <div class="row mb-3">
             <div class="col-md-4"></div> 
-            <div class="col-md-4  discriptiondiv"><p class="mt-1">Not Yet</p></div>     
+            <div class="col-md-4  discriptiondiv"><p class="mt-1">{{$item->product_contain}}</p></div>     
         
-            <div class="col-md-4 discriptiondiv " id="Discription"><p class="mt-1">at 5/4/2016</p>
-                <h4 class="mt-1">10 $</h4>
+            <div class="col-md-4 discriptiondiv " id="Discription"><p class="mt-1">At {{($item->created_at)->format('Y-m-d');}}</p>
+                <h4 class="mt-1">{{$item->total_price}}</h4>
                 <button class="btn btn-danger">
                     <i class="fas fa-trash-alt" style="color: white"></i> 
                   </button>
@@ -35,6 +38,7 @@
         
         </div>
     </div>
+    @endforeach
     <div class="row mt-3">
         <div class="col-md-12 d-flex justify-content-center"> <a href="#" class="btn card-btn" style="background: white; border-radius: 10px;width: 100%; color:#8b48e5;font-size:2rem;">    Payment </a></div>
     </div>

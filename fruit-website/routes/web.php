@@ -51,9 +51,7 @@ Route::get('/Delivery', function () {
 Route::get('/Cart', function () {
     return view('user.Cart');
 })->name('Cart');
-Route::get('/Allcart', function () {
-    return view('user.Allcart');
-})->name('Allcart');
+
 Route::get('/Contact', function () {
     return view('user.Contact');
 })->name('Contact');
@@ -150,7 +148,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/cart/gift/add', [CartController::class, 'StoreGift'])->name('cart.gift.create');
 
     Route::get('/gift', [CartController::class, 'createGift'])->name('gift');
+    Route::get('/Allcart', [CartController::class, 'view'])->name('Allcart');
 
+    
    
 
 });
