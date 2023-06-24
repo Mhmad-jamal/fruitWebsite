@@ -112,18 +112,21 @@ Route::any('/Product/all', function () {
     
     return view('admin.Product.View_all')->with('products', $products);
 })->name('Product.View_all');
+
+// gift route
 Route::any('/Gift/all', function () {
     $Gifts = Gift::all();
  
-    
     return view('admin.Gift.View_all')->with('Gifts', $Gifts);
 })->name('Gift.View_all');
-
 Route::get('/Gift/view/{id}', [GiftController::class, 'view'])->name('gift.details');
+Route::get('/Gift/edit/{id}', [GiftController::class, 'edit'])->name('gift.edit');
+Route::post('/Gift/store', [GiftController::class, 'store'])->name('Gift.store');
+Route::post('/Gift/update', [GiftController::class, 'update'])->name('Gift.update');
+Route::get('/Gift/delete/{id}', [GiftController::class, 'delete'])->name('gift.delete');
 
 /* Product route */
 Route::post('/porduct/store', [ProductController::class, 'store'])->name('product.store');
-Route::post('/Gift/store', [GiftController::class, 'store'])->name('Gift.store');
 
 Route::get('/Product/view/{id}', [ProductController::class, 'view'])->name('product.details');
 Route::get('/Product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
@@ -144,6 +147,8 @@ Route::middleware(['CheckRole:' . 'admin' . '!' . 'user'])->group(function () {
 Route::middleware('auth')->group(function () {
     // Protected routes for authenticated users
     Route::post('/cart/add', [CartController::class, 'create'])->name('cart.create');
+    Route::post('/cart/gift/add', [CartController::class, 'StoreGift'])->name('cart.gift.create');
+
     Route::get('/gift', [CartController::class, 'createGift'])->name('gift');
 
    

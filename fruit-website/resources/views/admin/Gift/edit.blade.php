@@ -8,12 +8,15 @@
     <div class="col-8">
       <div class="card mb-4">
         <div class="card-header d-flex justify-content-between align-items-center">
-          <h5 class="mb-0">Add New Gift</h5>
+          <h5 class="mb-0">Edit Gift</h5>
           <small class="text-muted float-end"></small>
         </div>
         <div class="card-body">
-           <form action="{{ route('Gift.store') }}" method="POST" enctype="multipart/form-data">
+           <form action="{{ route('Gift.update') }}" method="POST" enctype="multipart/form-data">
               @csrf
+              <input type="hidden" name="id" value="{{$Gift->id}}">
+
+            
             <div class="mb-3">
                 <label class="form-label" for="basic-icon-default-fullname">Gift Name</label>
                 <div class="input-group input-group-merge">
@@ -27,7 +30,7 @@
                     </span>
 
                     <input type="text" class="form-control" required name="Gift_Name" id="basic-icon-default-fullname"
-                        placeholder="" value="" aria-label="JApple" aria-describedby="basic-icon-default-fullname2">
+                        placeholder="" value="{{$Gift->name}}" aria-label="" aria-describedby="basic-icon-default-fullname2">
                 </div>
             
                 @error('Gift_Name')
@@ -35,7 +38,7 @@
                 @enderror
                 <div class="mb-3">
                     <label for="" class="form-label">Gift Price</label>
-                    <input id="" class="form-control" name="Gift_Price" type="text" placeholder="10 ">
+                    <input id=""  value="{{$Gift->price}}" class="form-control" name="Gift_Price" type="text" placeholder=" ">
                      
                 </div>
             </div>
@@ -46,7 +49,8 @@
           <div class="row">
             <div class="col-md-6">
                 
-            
+                <img src="{{asset('storage/'.$Gift->image)}}" class="img-fluid" alt="Responsive image">
+
             </div>
           
           </div>
@@ -62,13 +66,13 @@
                             <path d="m10 14-1-1-3 4h12l-5-7z"></path>
                         </svg>
                     </span>
-                    <input type="file" class="form-control" required name="Gift_Image" id="fileInput">
+                    <input type="file" class="form-control"  name="Gift_Image" id="fileInput">
                 </div>
                 @error('Gift_Image')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary CustomebBtn">Add</button>
+            <button type="submit" class="btn btn-primary CustomebBtn">Edit</button>
         </form>
         
         </div>

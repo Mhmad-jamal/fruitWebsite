@@ -46,8 +46,8 @@
                         </button>
                         <div class="dropdown-menu">
                           <a class="dropdown-item" href="{{route('gift.details', ['id' => $gift->id])}}"><i class="bx bx-trash me-1"></i> View</a>
-                          {{-- <a class="dropdown-item" href="{{ route('gift.edit', ['id' => $gift->id])}}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                           <a class="dropdown-item" href="{{route('gift.delete', ['id' => $gift->id])}}"><i class="bx bx-trash me-1"></i> Delete</a> --}}
+                         <a class="dropdown-item" href="{{ route('gift.edit', ['id' => $gift->id])}}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                           <a class="dropdown-item" href="{{route('gift.delete', ['id' => $gift->id])}}"><i class="bx bx-trash me-1"></i> Delete</a> 
                          </div>
                       </div>
                     </td>

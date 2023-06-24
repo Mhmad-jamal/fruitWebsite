@@ -244,9 +244,7 @@ updateValues();
  
       </script>
 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
-
-</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 @if (Session::has('success'))
 <script>
   swal("Product Added To Cart Successfully!", "", "success")

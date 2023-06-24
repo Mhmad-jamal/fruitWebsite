@@ -5,6 +5,11 @@ use Illuminate\Support\Facades\Validator;
 
 use Illuminate\Http\Request;
 use App\Models\Cart;
+use App\Models\Gift;
+use App\Models\CartGift;
+
+
+
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Session;
 
@@ -37,6 +42,7 @@ class CartController extends Controller
         if ($validator->fails()) {
             Session::flash('error', 'Validation Error: Please fill in all the required fields.');
 
+            return redirect()->back();
 
          
         }
@@ -60,7 +66,47 @@ return redirect()->back();
 
 }
 public function createGift(){
-    return view('user.gift');
+    $Gifts = Gift::all();
+
+    return view('user.gift')->with('gifts',$Gifts);
+
+
+}
+public function StoreGift(Request $request) {
+    
+      
+        // Validate the incoming request data
+        $validator = Validator::make($request->all(), [
+            'gift_id' => 'required',
+            'price' => 'required',
+            
+
+            // Add any other validation rules for the remaining fields
+        ]);
+        $userId = auth()->user()->id;
+
+  
+
+        // If validation fails, redirect back with error messages
+        if ($validator->fails()) {
+            Session::flash('error', 'Validation Error: Please fill in all the required fields.');
+            return redirect()->back();
+
+
+         
+        }
+    
+        // Get the authenticated user's ID
+  
+        // Create a new cart item
+        $cartItem = CartGift::create([
+            'gift_id' => $request->input('gift_id'),
+            'user_id' => $userId,
+            'price'=>$request->input('price'),
+
+        ]);
+        Session::flash('success', 'Gift item created successfully.');
+        return redirect()->back();
 
 }
     
