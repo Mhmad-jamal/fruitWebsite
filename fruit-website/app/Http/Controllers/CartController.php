@@ -114,11 +114,26 @@ public function view() {
 
     $Cart = Cart::join('products', 'Cart.product_id', '=', 'products.id')
     ->where('Cart.user_id', $userId)
-    ->get(['Cart.*', 'products.*']);
-
-    return view('user.Allcart')->with('cart',$Cart);
+    ->get(['Cart.*', 'products.product_name','products.product_details','products.product_image']);
+$gift=CartGift::join('gift', 'cart_gifts.gift_id', '=', 'gift.id')
+->where('cart_gifts.user_id', $userId)
+->get(['cart_gifts.*', 'gift.name','gift.image']);
+return view('user.Allcart')->with('cart', $Cart)->with('gift', $gift);
 
     
+}
+public function deleteCart($id)  {
+    $cart = Cart::findOrFail($id);
+    $cart->delete();
+    Session::flash('success', 'Cart item Deleted successfully.');
+    return redirect()->back(); 
+}
+public function deletegift($id) {
+    
+    $gift = CartGift::findOrFail($id);
+    $gift->delete();
+    Session::flash('success', 'Gift item Deleted successfully.');
+    return redirect()->back(); 
 }
     
     

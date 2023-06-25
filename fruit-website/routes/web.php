@@ -14,7 +14,7 @@ use App\Models\Cart;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\GiftController;
-
+use App\Http\Controllers\HomeController;
 
 
 
@@ -29,14 +29,12 @@ use App\Http\Controllers\GiftController;
 |
 */
 
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
 
-Route::get('/', function () {
-    return view('user.welcome');
-})->name('welcome');
 Route::get('/Article', function () {
     return view('user.Article');
 })->name('Article');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', function () {
     return view('user.about');
 })->name('about');
@@ -150,7 +148,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/gift', [CartController::class, 'createGift'])->name('gift');
     Route::get('/Allcart', [CartController::class, 'view'])->name('Allcart');
 
-    
+    Route::get('/cart/delete/{id}', [CartController::class, 'deleteCart'])->name('delete.cart');
+    Route::get('/cart/delete/gift/{id}', [CartController::class, 'deletegift'])->name('delete.gift');
+
    
 
 });
