@@ -143,6 +143,12 @@
                   </li>
                 </ul>
               </li>
+              <li class="menu-item">
+                <a href="{{route('order.get')}}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-table"></i>
+                  <div data-i18n="Tables">Orders</div>
+                </a>
+              </li>
             </ul>
           </aside>
           <!-- / Menu -->

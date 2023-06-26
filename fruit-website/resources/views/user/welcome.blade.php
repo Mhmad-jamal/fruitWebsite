@@ -3,19 +3,22 @@
 @section('content')
     <section class="hero container-fliud">
 
-      <img class="img-fluid" id="left-img" src="{{ asset('user/main-img/Main_IMG.png') }}" alt="">
+      <img class="img-fluid" id="left-img" src="{{ asset('storage/'.$Category[0]->category_image) }}" alt="">
 
       <div id="TextDiv">
         <h1 class="display-4" id="Main-title">
+          @if (isset($Category[0]))
+              
             <span>{{$Category[0]->category_name}}</span>
-            <br>Live Your Healthy Life
+            
         </h1>
         <p id="TextDivP" class="display-9" style="max-height: 6em; overflow: hidden; text-overflow: ellipsis;">
             {{$Category[0]->category_description}}
         </p>
         <a href="{{route('Store')}}"><button id="orderbtn">Order Now</button></a>
     </div>
-    
+    @endif
+
     
     </section>
     <section class="container mt-5 ">
@@ -31,7 +34,7 @@
                           <h5 class="card-title text-center">{{ $products[$i]->product_name }}</h5>
                           <p class="card-text text-center truncate-lines" style="height: 221px;">
                             {{ $products[$i]->product_details }}
-                        </p>                          <a href="{{ route('product', ['id' => $products[$i]->id]) }}" class="btn card-btn">Buy Now</a>
+                        </p> <a href="{{ route('product', ['id' => $products[$i]->id]) }}" class="btn card-btn">Buy Now</a>
                       </div>
                   </div>
               @endif
@@ -139,6 +142,8 @@
     <section class="container">
 <div class="row" >
     <div class="col">
+      @if (isset($Category[1]))
+          
 <h2 class="div-title">{{$Category[1]->category_name}}</h2>
 <p class="div-paragraph">{{$Category[1]->category_description}}</p>
 
@@ -147,6 +152,7 @@
     <img  src="{{ asset('user/main-img/Group-44.png') }}" alt="Image 3" class="img-fluid customDivimage">
     <img src="{{ asset('user/main-img/Group-43.png') }}" alt="Image 3" class="img-fluid ">
     <img src="{{ asset('user/main-img/Group-25.png') }}" alt="Image 3" class="img-fluid customDivimage">
+    @endif
 
 
 </div>
@@ -155,14 +161,17 @@
 
     <section class="container-fluid mt-3" id="Section-5">
         <div class="row" id="seciotn-5-row">
+          @if (isset($Category[2]))
+
             <div class="col p-div">
-        <h2 class="div-title ">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
-        <h4 class="div-secount-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4>
+        <h2 class="div-title ">{{$Category[2]->category_name}}</h2>
 
-        <p class="div-paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste similique esse sapiente ullam repellendus soluta odit, quae veniam culpa magnam aliquam cumque architecto dolorem magni debitis libero incidunt inventore sunt?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non provident sapiente deserunt reprehenderit quidem culpa unde cum laudantium blanditiis. Amet sit ratione saepe alias in rem asperiores reiciendis. Sequi, eum.lor Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias accusantium quam perspiciatis? Eius velit eos mollitia laboriosam aut tempore aliquid perspiciatis facere ad, hic expedita culpa ducimus atque vitae totam!</p>
+        <p class="div-paragraph">{{$Category[2]->category_description}}</p>
+        <a href="{{route('Store')}}">
         <button id="explore-btn">Explore</button>
-
+        </a>
                 </div>
+                @endif
                 <div class="col p-div d-inline-flex">
                       <div class="col">
                         <img src="{{ asset('user/main-img/Group-53.png') }}" alt="Image 1" id="KidsImg" class="img-fluid">

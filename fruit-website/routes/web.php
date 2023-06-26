@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\GiftController;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\AdminOrderController;
 
 
 /*
@@ -121,7 +122,7 @@ Route::post('/Gift/store', [GiftController::class, 'store'])->name('Gift.store')
 Route::post('/Gift/update', [GiftController::class, 'update'])->name('Gift.update');
 Route::get('/Gift/delete/{id}', [GiftController::class, 'delete'])->name('gift.delete');
 
-/* Product route */
+
 Route::post('/porduct/store', [ProductController::class, 'store'])->name('product.store');
 
 Route::get('/Product/view/{id}', [ProductController::class, 'view'])->name('product.details');
@@ -131,7 +132,8 @@ Route::get('/Product/edit/{id}', [ProductController::class, 'edit'])->name('prod
 Route::post('/product/update', [ProductController::class, 'update'])->name('product.update');
 
 
-/*end  Product route */
+Route::get('orders/get', [AdminOrderController::class, 'getorders'])->name('order.get');
+
 
 });
 
@@ -150,6 +152,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/cart/delete/{id}', [CartController::class, 'deleteCart'])->name('delete.cart');
     Route::get('/cart/delete/gift/{id}', [CartController::class, 'deletegift'])->name('delete.gift');
+    Route::post('/api/addorder', [OrderController::class, 'create'])->name('order.create');
 
    
 

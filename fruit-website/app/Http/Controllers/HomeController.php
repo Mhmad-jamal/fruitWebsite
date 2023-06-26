@@ -14,10 +14,7 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+   
 
     /**
      * Show the application dashboard.
@@ -27,7 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         $products = Product::latest()->limit(11)->get();
-        $Category = Category::latest()->limit(2)->get();
+        $Category = Category::limit(3)->get();
 
         return view('user.welcome')->with("products",$products)->with('Category',$Category);
     }
