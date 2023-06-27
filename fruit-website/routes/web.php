@@ -7,6 +7,7 @@ use App\Http\Controllers\Article;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Gift;
+use App\Models\About;
 
 
 use App\Http\Controllers\CategoriesController;
@@ -17,6 +18,8 @@ use App\Http\Controllers\GiftController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AdminOrderController;
+use App\Http\Controllers\AboutUsController;
+
 
 
 /*
@@ -37,7 +40,10 @@ Route::get('/Article', function () {
 })->name('Article');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', function () {
-    return view('user.about');
+    $about = About::first(); // Retrieve the first About record from the database
+
+    return view('user.about')->with('about',$about);
+    
 })->name('about');
 Route::get('/article/{id}', [Article::class, 'show'])->name('single-article');
 
@@ -133,6 +139,9 @@ Route::post('/product/update', [ProductController::class, 'update'])->name('prod
 
 
 Route::get('orders/get', [AdminOrderController::class, 'getorders'])->name('order.get');
+//about us route
+Route::get('about/edit', [AboutUsController::class, 'edit'])->name('about.edit');
+Route::post('about/update', [AboutUsController::class, 'update'])->name('about.update');
 
 
 });

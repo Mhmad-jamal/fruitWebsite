@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="{{ asset('vendor/sweetalert/sweetalert.css') }}">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -149,6 +148,20 @@
                   <div data-i18n="Tables">Orders</div>
                 </a>
               </li>
+              <li class="menu-item" style="">
+                <a href="javascript:void(0)" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-crown"></i>
+                  <div data-i18n="Extended UI">About us</div>
+                </a>
+                <ul class="menu-sub">
+                  <li class="menu-item">
+                    <a href="{{route('about.edit')}}" class="menu-link">
+                      <div data-i18n="Perfect Scrollbar"> edit</div>
+                    </a>
+                  </li>
+                
+                </ul>
+              </li>
             </ul>
           </aside>
           <!-- / Menu -->
@@ -214,7 +227,7 @@
                       <li>
                         <div class="dropdown-divider"></div>
                       </li>
-                      <li>
+                      {{-- <li>
                         <a class="dropdown-item" href="#">
                           <i class="bx bx-user me-2"></i>
                           <span class="align-middle">My Profile</span>
@@ -234,15 +247,21 @@
                             <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
                           </span>
                         </a>
-                      </li>
-                      <li>
+                      </li> --}}
+                      {{-- <li>
                         <div class="dropdown-divider"></div>
-                      </li>
+                      </li> --}}
                       <li>
-                        <a class="dropdown-item" href="auth-login-basic.html">
-                          <i class="bx bx-power-off me-2"></i>
-                          <span class="align-middle">Log Out</span>
-                        </a>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+    <i class="bx bx-power-off me-2"></i>
+    <span class="align-middle">Log Out</span>
+</a>
+
+<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+    @csrf
+</form>
+                       
                       </li>
                     </ul>
                   </li>
@@ -284,6 +303,5 @@
 <script src="{{ asset('admin/assets/js/dashboards-analytics.js') }}"></script>
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-<script src="{{ asset('vendor/sweetalert/sweetalert.min.js') }}"></script>
 
 

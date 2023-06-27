@@ -86,13 +86,11 @@
 
  @csrf
        <div class="row mt-3">
-        <div class="col-md-8 d-flex justify-content-center"> <button id="submitbtn" class="btn card-btn" style="background: white; border-radius: 10px;width: 100%; color:#8b48e5;font-size:2rem;">    Payment </button></div>
-            <div class="col-md-4 d-flex justify-content-center"> <h5 class="btn card-btn" style="background: white; border-radius: 10px;width: 100%; color:#8b48e5;font-size:2rem;">    Total Price : {{$total}} $ </h5></div>
+        <div class="col-md-8  d-flex justify-content-center"> <button id="submitbtn" class="btn card-btn mt-3" style="background: white; border-radius: 10px;width: 100%; color:#8b48e5;font-size:2rem;">    Payment </button></div>
+            <div class="col-md-4 d-flex justify-content-center"> <h5 class="btn card-btn mt-3" style="background: white; border-radius: 10px;width: 100%; color:#8b48e5;font-size:2rem;">    Total Price : {{$total}} $ </h5></div>
 
     </div>
 
-      
-       
   
 </div>
 <br>

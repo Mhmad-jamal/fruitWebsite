@@ -326,6 +326,9 @@ transform: translateY(-20%);
 .card-img-top-Article{
   width: 70%;
 }
+#Imagecenter{
+  max-width: 40%!important;
+}
  #articleSection{
   display: inline!important;
   padding-left: 10%;}

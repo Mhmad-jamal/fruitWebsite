@@ -161,7 +161,7 @@
             </div>
             <div class="col">
                 <img src="{{ asset('user/main-img/Group-44.png') }}" alt="Image 3" class="img-fluid customDivimage">
-                <img src="{{ asset('user/main-img/Group-43.png') }}" alt="Image 3" class="img-fluid ">
+                <img src="{{ asset('user/main-img/Group-43.png') }}" alt="Image 3" id="Imagecenter" class="img-fluid ">
                 <img src="{{ asset('user/main-img/Group-25.png') }}" alt="Image 3" class="img-fluid customDivimage">
                 @endif
 
