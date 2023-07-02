@@ -2,12 +2,12 @@
 
 @section('content')
     <section class="hero container-fliud">
+                @if (isset($Category[0]))
 
         <img class="img-fluid" id="left-img" src="{{ asset('storage/' . $Category[0]->category_image) }}" alt="">
 
         <div id="TextDiv">
             <h1 class="display-4" id="Main-title">
-                @if (isset($Category[0]))
                     <span>{{ $Category[0]->category_name }}</span>
 
             </h1>
