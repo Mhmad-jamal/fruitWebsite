@@ -35,7 +35,7 @@ color: #8b48e5;
     line-height: 43px;
 
 }
-#emailInput,#passwordinput,#password-confirm,#name{
+#emailInput,#passwordinput,#password-confirm,#name,#phone{
     width: 90%;
     height: 50px;
     opacity: 0.40;
