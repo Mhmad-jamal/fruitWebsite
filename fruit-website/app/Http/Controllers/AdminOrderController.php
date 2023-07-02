@@ -18,7 +18,7 @@ class AdminOrderController extends Controller
             $join->on('products.id', '=', 'orders.product_id')
                  ->where('orders.type', '!=', 'gift');
         })
-        ->select('orders.*', 'users.name as user_name', 'products.product_name as product_name', 'gift.name as gift_name')
+        ->select('orders.*', 'users.name as user_name','users.phone as user_phone', 'products.product_name as product_name', 'gift.name as gift_name')
         ->get();
      
    return view('admin.order.view')->with('orders',$orders);

@@ -4,19 +4,19 @@
 @include('sweetalert::alert')
 
 <div class="row justify-content-center">
-    <div class="col-md-10 justify-content-center">
+    <div class="col-md-12 justify-content-center p-5">
         <div class="card">
-            <h5 class="card-header">All item</h5>
+            <h5 class="card-header">All Orders</h5>
             <div class="table-responsive text-nowrap">
               <table class="table" id="itemtable">
                 <thead class="table-dark">
                   <tr>
                     <th>id</th>
                     <th>user name </th>
+                    <th>user phone </th>
 
                     <th>item Name</th>
-                    <th>item type</th>
-                    <th>item plan</th>
+                    <th> plan</th>
 
                     <th> Quantity </th>
 
@@ -34,10 +34,11 @@
                       <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>{{$item->id}}</strong>
                     </td>
                     <td>{{$item->user_name}}</td>
+                    <td>{{$item->user_phone}}</td>
+
                     <td>
                         <span class="badge bg-label-warning me-1">{{ ($item->product_name == '') ? $item->gift_name : $item->product_name }}</span>
                     </td>
-                    <td><span class="badge bg-label-danger me-1">{{$item->type}}</span></td>
                     <td><span class="badge bg-label-danger me-1">{{$item->plan}}</span></td>
 
                     <td><span class="badge bg-label-danger me-1">{{$item->quantity}}</span></td>

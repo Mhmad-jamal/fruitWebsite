@@ -53,9 +53,9 @@ Auth::routes();
 Route::get('/Delivery', function () {
     return view('user.Delivery');
 })->name('Delivery');
-Route::get('/Cart', function () {
+Route::get('/profile', function () {
     return view('user.Cart');
-})->name('Cart');
+})->name('profile');
 
 Route::get('/Contact', function () {
     return view('user.Contact');

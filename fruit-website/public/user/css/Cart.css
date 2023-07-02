@@ -46,7 +46,7 @@ border-style: solid;
     
     filter: drop-shadow(0px 6px 3px rgba(0,0,0,0.16 ));
     
-    background: #8b48e5
+    background: #b486f1
  }
  .circle-container {
     width: 200px;
@@ -84,3 +84,4 @@ height: 80%;
         margin-top: 5%;
     }
   }
+ 

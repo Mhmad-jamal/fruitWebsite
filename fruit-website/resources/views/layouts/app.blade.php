@@ -4,14 +4,20 @@
 
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
-
+<style>
+    .dropdown-menu{
+    background-color: unset!important;
+    z-index: 500;
+   
+  }
+    </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Fruit') }}</title>
+    <title>Fruish</title>
     @if (Route::currentRouteName() === 'welcome' )
     <link rel="stylesheet" href="{{ asset('user/css/home.css') }}">
 @endif
@@ -28,7 +34,7 @@
 <link rel="stylesheet" href="{{ asset('user/css/Signin.css') }}">
 
 @endif
-@if(Route::currentRouteName() == 'Cart')
+@if(Route::currentRouteName() == 'profile')
     <link rel="stylesheet" href="{{ asset('user/css/Cart.css') }}">
 @endif
 @if (Route::currentRouteName() === 'single-article')
@@ -133,9 +139,16 @@
                             v-pre >
                             {{ Auth::user()->name }}
                         </a>
-
+    
                         <div class="dropdown-menu bg-none border-0" id="cutsome-drop-douwn" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item loginBtn" href="{{ route('logout') }}"
+                            @if (auth()->user()->role != 'admin')
+
+                            <a class="dropdown-item loginBtn mt-3" href="{{ route('profile') }}">
+                                My Profile
+                            </a>
+                            @endif
+
+                            <a class="dropdown-item loginBtn mt-3" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
@@ -144,6 +157,7 @@
     <a class="dropdown-item loginBtn mt-3" href="{{ route('dashboard') }}">
         Dashboard
     </a>
+   
 @endif
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                 @csrf

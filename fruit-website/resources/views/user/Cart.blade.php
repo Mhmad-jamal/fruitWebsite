@@ -15,8 +15,7 @@
     </div>
     <div class="col-md-4 d-flex align-items-center">
         <div class="col-md-8" id="right_div">
-            Hey Mhmad
-        </div>
+Subsecription :        </div>
 
     </div>
 </div>
@@ -35,7 +34,7 @@
                     <span class="circle-number">2</span>
                   </div>
                   <div class="h5 text-center">
-                    Monthly basket
+                    Deleivered basket
                   </div>
                 </div>
               <div class="col-md-4 d-flex justify-content-center flex-column">
@@ -43,7 +42,7 @@
                     <span class="circle-number">2</span>
                   </div>
                   <div class="h5 text-center">
-                    Yearly basket
+                    All Time Basket
                   </div>
                 </div>
                 
