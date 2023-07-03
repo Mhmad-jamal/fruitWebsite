@@ -11,7 +11,7 @@
                     <span>{{ $Category[0]->category_name }}</span>
 
             </h1>
-            <p id="TextDivP" class="display-9" style="max-height: 6em; overflow: hidden; text-overflow: ellipsis;">
+            <p id="TextDivP" class="display-9" style="max-height: 8em; overflow: hidden; text-overflow: ellipsis;">
                 {{ $Category[0]->category_description }}
             </p>
             <a href="{{ route('Store') }}"><button id="orderbtn">Order Now</button></a>
@@ -153,13 +153,13 @@
 
     <section class="container">
         <div class="row">
-            <div class="col">
+            <div class="col" id="seciton4">
                 @if (isset($Category[1]))
                     <h2 class="div-title">{{ $Category[1]->category_name }}</h2>
                     <p class="div-paragraph">{{ $Category[1]->category_description }}</p>
 
             </div>
-            <div class="col">
+            <div class="col d-flex justify-content-center">
                 <img src="{{ asset('user/main-img/Group-44.png') }}" alt="Image 3" class="img-fluid customDivimage">
                 <img src="{{ asset('user/main-img/Group-43.png') }}" alt="Image 3" id="Imagecenter" class="img-fluid ">
                 <img src="{{ asset('user/main-img/Group-25.png') }}" alt="Image 3" class="img-fluid customDivimage">
@@ -173,7 +173,7 @@
     <section class="container-fluid mt-3" id="Section-5">
         <div class="row" id="seciotn-5-row">
             @if (isset($Category[2]))
-                <div class="col p-div">
+                <div class="col p-div" id="Section-5-div">
                     <h2 class="div-title ">{{ $Category[2]->category_name }}</h2>
 
                     <p class="div-paragraph">{{ $Category[2]->category_description }}</p>

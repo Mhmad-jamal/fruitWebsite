@@ -7,7 +7,7 @@
         height: 100px;
         z-index: 500;
     }
- 
+   
  
   .loginBtn:hover{
     color: white;
@@ -77,4 +77,29 @@ text-align: center;
     color: rgb(255, 255, 255)!important;
 
   }
+  @media only screen and (max-width: 600px) {
+    #navbarText {
+      background-color: #8c7ad46c;
+      border-radius: 5px;
+      padding-left: 2%;
+      padding-bottom: 150px;
+    }
+    #cutsome-drop-douwn >a,#navbarDropdown{
+      color: white!important;
+    }
+    .nav-link,.loginBtn{
+color: white!important;
+    }
+     .active{
+      color: hwb(252 47% 17%)!important;
+          }
+         .container{
+          padding-left: 0;
+         } 
+#shopingIcon{
+  margin-left: 0!important;
+}
+  }
+  
  
+  

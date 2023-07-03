@@ -110,7 +110,7 @@
                         @auth
                         <li class="nav-item">
                             <a href="{{route('Allcart')}}">
-                                <i class="fas fa-shopping-cart fa-lg mr-2 " style="color: #8b48e5;font-size: 35px;
+                                <i id="shopingIcon" class="fas fa-shopping-cart fa-lg mr-2 " style="color: #8b48e5;font-size: 35px;
                                 margin-left: 200px;
                                 margin-top: 1.7rem;"></i>
                                 </a>

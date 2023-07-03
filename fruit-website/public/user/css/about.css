@@ -8,13 +8,11 @@
 body{
     background-color:#fff;
 }
-.container {
-    width: 1170px;
-    margin: 0px auto;
-    }
+
 /* start header*/
  .container{
     overflow: hidden;
+    padding: 0!important;
 }
 nav .container .img1 img{
     float:left;
@@ -89,9 +87,10 @@ nav .container .img3 img{
 .con .slide .con2 .secDiv1 , .con .slide .con2 .secDiv2 {
     background-color:#8b48e6;
     border-radius: 20px;
-    width:1170px
+    width:100%
     
 }
+
 
 .con .slide .con2  .secDiv1 .image{
     width:35%;
@@ -167,7 +166,6 @@ nav .container .img3 img{
     color:#eec1f6;
     font-family: cursive;
     text-shadow: -1px 2px 2px #9566c2;
-    margin:0 119px ;
 }
 .con .slide .con2 .secDiv2 .inf2{
     display: flex;
@@ -196,6 +194,7 @@ nav .container .img3 img{
     align-items: center;
     justify-content: center;
     margin-top: 5%;
+    max-width: 100%;
 }
 
 @media (max-width: 1024px) {
