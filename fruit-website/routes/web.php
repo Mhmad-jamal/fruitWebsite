@@ -124,11 +124,13 @@ Route::any('/Gift/all', function () {
  
     return view('admin.Gift.View_all')->with('Gifts', $Gifts);
 })->name('Gift.View_all');
+
+
 Route::any('/paymentPage', function () {
    
  
-    return view('user.visaPaymen');
-})->name('Gift.View_all');
+    return view('user.visaPayment');
+})->name('visaPayment');
 Route::get('/Gift/view/{id}', [GiftController::class, 'view'])->name('gift.details');
 Route::get('/Gift/edit/{id}', [GiftController::class, 'edit'])->name('gift.edit');
 Route::post('/Gift/store', [GiftController::class, 'store'])->name('Gift.store');
