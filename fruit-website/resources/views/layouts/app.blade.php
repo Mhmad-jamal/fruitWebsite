@@ -73,6 +73,9 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Scripts -->
     <link rel="stylesheet" href="{{ asset('user/css/layout.css') }}">
+  
+    <link rel="icon" type="image/x-icon" href="https://www.flaticon.com/svg/static/icons/svg/1234/1234567.svg" />
+
 </head>
 
 <body>

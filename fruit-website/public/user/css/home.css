@@ -81,8 +81,8 @@
         width: 25%!important;
       }
     @media screen and (max-width: 996px) {
-      .customP{
-      font-size: .5rem;
+      .customDivimage{
+        margin-top: 90%!important;
       }
       .custom-width{
         width: 100%!important;

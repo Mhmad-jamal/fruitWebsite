@@ -53,7 +53,7 @@
                         <div class="d-flex justify-content-end  flex-column "> <img class="img-fluid custom-width mx-auto"
                                 id="" src="{{ asset('storage/' . $products[3]->product_image) }}" alt="">
                             <h2 class="text-center">{{ $products[3]->product_name }}</h2>
-                            <p class="text-justify customP text-center ">
+                            <p class="text-justify customP text-center truncate-lines">
                                 {{ $products[3]->product_details }}</p>
 
                         </div>
@@ -67,7 +67,7 @@
                             class="img-fluid custom-width mx-auto" id="" src="{{ asset('storage/' . $products[4]->product_image) }}" alt="">
                         <h2 class="text-center">{{ $products[4]->product_name }}</h2>
 
-                        <p class="text-justify customP text-center">
+                        <p class="text-justify customP text-center truncate-lines">
                             {{ $products[4]->product_details }}</p>
 
                     </div>
@@ -82,7 +82,7 @@
                             src="{{ asset('storage/' . $products[5]->product_image) }}" alt="">
                         <h2 class="text-center">{{ $products[5]->product_name }}</h2>
 
-                        <p class="text-justify customP text-center">
+                        <p class="text-justify customP text-center truncate-lines">
                             {{ $products[5]->product_details }}</p>
 
                     </div>
@@ -90,7 +90,7 @@
             @endif
         </div>
 
-        <div class="col-3 d-flex justify-content-center align-items-center  ">
+        <div class="col-4 d-flex justify-content-center align-items-center  ">
             <img class="img-fluid max-width-100" style="height: fit-content" id="Center-img"
                 src="{{ asset('user/main-img/Fruit-Box.png') }}" alt="">
 
@@ -106,7 +106,7 @@
                             src="{{ asset('storage/' . $products[6]->product_image) }}" alt="">
                         <h2 class="text-center">{{ $products[6]->product_name }}</h2>
 
-                        <p class="text-justify customP text-center">
+                        <p class="text-justify customP text-center truncate-lines">
                             {{ $products[6]->product_details }}</p>
 
                     </div>
@@ -121,7 +121,7 @@
                             src="{{ asset('storage/' . $products[7]->product_image) }}" alt="">
                         <h2 class="text-center">{{ $products[7]->product_name }}</h2>
 
-                        <p class="text-justify customP text-center">
+                        <p class="text-justify customP text-center truncate-lines">
                             {{ $products[7]->product_details }}</p>
 
                     </div>
@@ -136,7 +136,7 @@
                             src="{{ asset('storage/' . $products[8]->product_image) }}" alt="">
                         <h2 class="text-center">{{ $products[8]->product_name }}</h2>
 
-                        <p class="text-justify customP text-center"
+                        <p class="text-justify customP text-center truncate-lines"
                             style="max-height: 3em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;">
                             {{ $products[8]->product_details }}
                         </p>

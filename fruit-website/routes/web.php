@@ -19,6 +19,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\PaymentController;
+
 
 
 
@@ -122,6 +124,11 @@ Route::any('/Gift/all', function () {
  
     return view('admin.Gift.View_all')->with('Gifts', $Gifts);
 })->name('Gift.View_all');
+Route::any('/paymentPage', function () {
+   
+ 
+    return view('user.visaPaymen');
+})->name('Gift.View_all');
 Route::get('/Gift/view/{id}', [GiftController::class, 'view'])->name('gift.details');
 Route::get('/Gift/edit/{id}', [GiftController::class, 'edit'])->name('gift.edit');
 Route::post('/Gift/store', [GiftController::class, 'store'])->name('Gift.store');
@@ -147,8 +154,10 @@ Route::post('about/update', [AboutUsController::class, 'update'])->name('about.u
 });
 
 Route::middleware(['CheckRole:' . 'admin' . '!' . 'user'])->group(function () {
+
 });
 
+Route::any('/Payment', [PaymentController::class, 'view'])->name('payment.create');
 
 /// user login route 
 Route::middleware('auth')->group(function () {
