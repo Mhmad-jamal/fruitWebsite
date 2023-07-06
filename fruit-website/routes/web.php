@@ -183,16 +183,17 @@ Route::middleware('auth')->group(function () {
 
 
 
-Route::get('/posts', [BlogPostController::class, 'index'])->name('posts.index');
+Route::get('/blog/posts', [BlogPostController::class, 'index'])->name('blog.posts.index');
 
-Route::get('/posts/create', [BlogPostController::class, 'create'])->name('posts.create')->middleware('admin');
 
-Route::post('/posts', [BlogPostController::class, 'store'])->name('posts.store')->middleware('admin');
+Route::get('/blog/posts/create', [BlogPostController::class, 'create'])->name('blog.posts.create')->middleware('admin');
 
-Route::get('/posts/{id}', [BlogPostController::class, 'show'])->name('posts.show');
+Route::post('/blog/posts', [BlogPostController::class, 'store'])->name('blog.posts.store')->middleware('admin');
 
-Route::get('/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('posts.edit')->middleware('admin');
+Route::get('/blog/posts/{id}', [BlogPostController::class, 'show'])->name('blog.posts.show');
 
-Route::put('/posts/{id}', [BlogPostController::class, 'update'])->name('posts.update')->middleware('admin');
+Route::get('/blog/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('blog.posts.edit')->middleware('admin');
 
-Route::delete('/posts/{id}', [BlogPostController::class, 'destroy'])->name('posts.destroy')->middleware('admin');
+Route::put('/blog/posts/{id}', [BlogPostController::class, 'update'])->name('blog.posts.update')->middleware('admin');
+
+Route::delete('/blog/posts/{id}', [BlogPostController::class, 'destroy'])->name('blog.posts.destroy')->middleware('admin');
