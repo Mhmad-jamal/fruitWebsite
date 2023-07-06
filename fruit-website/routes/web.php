@@ -194,7 +194,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/blog/posts', [BlogPostController::class, 'index'])->name('blog.posts.index');
 
-<<<<<<< HEAD
 Route::get('/posts/create', [BlogPostController::class, 'create'])->name('posts.create')->middleware('CheckRole:admin');
 
 Route::post('/posts', [BlogPostController::class, 'store'])->name('posts.store')->middleware('CheckRole:admin');
@@ -205,7 +204,6 @@ Route::get('/blog/posts/create', [BlogPostController::class, 'create'])->name('b
 
 Route::post('/blog/posts', [BlogPostController::class, 'store'])->name('blog.posts.store')->middleware('CheckRole:admin');
 
-<<<<<<< HEAD
 Route::get('/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('posts.edit')->middleware('CheckRole:admin');
 
 Route::put('/posts/{id}', [BlogPostController::class, 'update'])->name('posts.update')->middleware('CheckRole:admin');
