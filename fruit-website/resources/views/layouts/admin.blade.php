@@ -148,6 +148,12 @@
                   <div data-i18n="Tables">Orders</div>
                 </a>
               </li>
+              <li class="menu-item">
+                <a href="{{route('message.view')}}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bx-table"></i>
+                  <div data-i18n="Tables">Message</div>
+                </a>
+              </li>
               <li class="menu-item" style="">
                 <a href="javascript:void(0)" class="menu-link menu-toggle">
                   <i class="menu-icon tf-icons bx bx-crown"></i>

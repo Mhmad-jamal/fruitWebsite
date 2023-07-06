@@ -8,6 +8,8 @@ use App\Models\Category;
 use App\Models\Product;
 use App\Models\Gift;
 use App\Models\About;
+use App\Models\Contactus;
+
 
 
 use App\Http\Controllers\CategoriesController;
@@ -20,6 +22,8 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ContactUsController;
+
 
 
 use App\Http\Controllers\BlogPostController;
@@ -85,6 +89,10 @@ Route::middleware(['CheckRole:admin'])->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
+    Route::get('/message', function () {
+$message=Contactus::All();
+        return view('admin.contact.view')->with('message',$message);
+    })->name('message.view');
     /* Categories route */
     Route::any('/categories/add', function () {
         return view('admin.Categories.Add_Categories');
@@ -167,7 +175,9 @@ Route::middleware('auth')->group(function () {
     // Protected routes for authenticated users
     Route::post('/cart/add', [CartController::class, 'create'])->name('cart.create');
     Route::post('/cart/gift/add', [CartController::class, 'StoreGift'])->name('cart.gift.create');
+    Route::post('/contact/send/message', [ContactUsController::class, 'store'])->name('contact.create');
 
+    
     Route::get('/gift', [CartController::class, 'createGift'])->name('gift');
     Route::get('/Allcart', [CartController::class, 'view'])->name('Allcart');
 
@@ -185,14 +195,14 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/posts', [BlogPostController::class, 'index'])->name('posts.index');
 
-Route::get('/posts/create', [BlogPostController::class, 'create'])->name('posts.create')->middleware('admin');
+Route::get('/posts/create', [BlogPostController::class, 'create'])->name('posts.create')->middleware('CheckRole:admin');
 
-Route::post('/posts', [BlogPostController::class, 'store'])->name('posts.store')->middleware('admin');
+Route::post('/posts', [BlogPostController::class, 'store'])->name('posts.store')->middleware('CheckRole:admin');
 
 Route::get('/posts/{id}', [BlogPostController::class, 'show'])->name('posts.show');
 
-Route::get('/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('posts.edit')->middleware('admin');
+Route::get('/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('posts.edit')->middleware('CheckRole:admin');
 
-Route::put('/posts/{id}', [BlogPostController::class, 'update'])->name('posts.update')->middleware('admin');
+Route::put('/posts/{id}', [BlogPostController::class, 'update'])->name('posts.update')->middleware('CheckRole:admin');
 
-Route::delete('/posts/{id}', [BlogPostController::class, 'destroy'])->name('posts.destroy')->middleware('admin');
+Route::delete('/posts/{id}', [BlogPostController::class, 'destroy'])->name('posts.destroy')->middleware('CheckRole:admin');
