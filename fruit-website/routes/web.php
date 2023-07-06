@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckRole;
 use App\Http\Controllers\ProductController;
@@ -193,16 +192,31 @@ Route::middleware('auth')->group(function () {
 
 
 
-Route::get('/posts', [BlogPostController::class, 'index'])->name('posts.index');
+Route::get('/blog/posts', [BlogPostController::class, 'index'])->name('blog.posts.index');
 
+<<<<<<< HEAD
 Route::get('/posts/create', [BlogPostController::class, 'create'])->name('posts.create')->middleware('CheckRole:admin');
 
 Route::post('/posts', [BlogPostController::class, 'store'])->name('posts.store')->middleware('CheckRole:admin');
+=======
 
-Route::get('/posts/{id}', [BlogPostController::class, 'show'])->name('posts.show');
+Route::get('/blog/posts/create', [BlogPostController::class, 'create'])->name('blog.posts.create')->middleware('CheckRole:admin');
+>>>>>>> 3467aa6ac5937c2165236fe44cceace704a321a5
 
+Route::post('/blog/posts', [BlogPostController::class, 'store'])->name('blog.posts.store')->middleware('CheckRole:admin');
+
+<<<<<<< HEAD
 Route::get('/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('posts.edit')->middleware('CheckRole:admin');
 
 Route::put('/posts/{id}', [BlogPostController::class, 'update'])->name('posts.update')->middleware('CheckRole:admin');
 
 Route::delete('/posts/{id}', [BlogPostController::class, 'destroy'])->name('posts.destroy')->middleware('CheckRole:admin');
+=======
+Route::get('/blog/posts/{id}', [BlogPostController::class, 'show'])->name('blog.posts.show');
+
+Route::get('/blog/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('blog.posts.edit')->middleware('CheckRole:admin');
+
+Route::put('/blog/posts/{id}', [BlogPostController::class, 'update'])->name('blog.posts.update')->middleware('CheckRole:admin');
+
+Route::delete('/blog/posts/{id}', [BlogPostController::class, 'destroy'])->name('blog.posts.destroy')->middleware('CheckRole:admin');
+>>>>>>> 3467aa6ac5937c2165236fe44cceace704a321a5

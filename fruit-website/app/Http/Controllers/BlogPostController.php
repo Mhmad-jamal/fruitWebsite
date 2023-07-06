@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\BlogPost;
@@ -36,7 +35,7 @@ class BlogPostController extends Controller
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('blog.show', $post->id)
+        return redirect()->route('blog.posts.show', $post->id)
             ->with('success', 'Blog post created successfully.');
     }
 
