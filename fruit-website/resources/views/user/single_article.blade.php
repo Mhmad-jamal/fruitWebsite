@@ -33,7 +33,7 @@
       <div class="col-md-4">
        @foreach ($lastThreeArticles as $item )
            
-       <article>
+       <article class="mt-3">
         <div class="article-wrapper">
           <figure>
             <img src="{{ asset('storage/'.$item->image) }}" alt="" style="width: 300px; height: 200px; object-fit: cover;">
