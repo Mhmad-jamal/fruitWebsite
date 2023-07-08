@@ -22,6 +22,7 @@ use App\Http\Controllers\AdminOrderController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ContactUsController;
+use App\Models\BlogPost;
 
 
 
@@ -42,7 +43,8 @@ use App\Http\Controllers\BlogPostController;
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
 
 Route::get('/Article', function () {
-    return view('user.Article');
+    $article = BlogPost::all();
+    return view('user.Article')->with('article', $article);
 })->name('Article');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', function () {
@@ -52,7 +54,6 @@ Route::get('/about', function () {
 
 })->name('about');
 Route::get('/article/{id}', [Article::class, 'show'])->name('single-article');
-
 Auth::routes();
 //Delivery
 
@@ -88,10 +89,14 @@ Route::middleware(['CheckRole:admin'])->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
-    Route::get('/message', function () {
+    Route::get('admin/message', function () {
 $message=Contactus::All();
         return view('admin.contact.view')->with('message',$message);
     })->name('message.view');
+    Route::get('admin/message/{id}', function ($id) {
+        $message = Contactus::findOrFail($id);
+        return view('admin.contact.details')->with('message', $message);
+    })->name('message.details');
     /* Categories route */
     Route::any('/categories/add', function () {
         return view('admin.Categories.Add_Categories');
@@ -191,30 +196,26 @@ Route::middleware('auth')->group(function () {
 ## this is post route
 
 
-
+// aricle section
 Route::get('/blog/posts', [BlogPostController::class, 'index'])->name('blog.posts.index');
 
 Route::get('/posts/create', [BlogPostController::class, 'create'])->name('posts.create')->middleware('CheckRole:admin');
 
 Route::post('/posts', [BlogPostController::class, 'store'])->name('posts.store')->middleware('CheckRole:admin');
-=======
 
 Route::get('/blog/posts/create', [BlogPostController::class, 'create'])->name('blog.posts.create')->middleware('CheckRole:admin');
->>>>>>> 3467aa6ac5937c2165236fe44cceace704a321a5
 
 Route::post('/blog/posts', [BlogPostController::class, 'store'])->name('blog.posts.store')->middleware('CheckRole:admin');
 
-Route::get('/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('posts.edit')->middleware('CheckRole:admin');
+Route::get('/posts/edit/{id}', [BlogPostController::class, 'edit'])->name('posts.edit')->middleware('CheckRole:admin');
 
-Route::put('/posts/{id}', [BlogPostController::class, 'update'])->name('posts.update')->middleware('CheckRole:admin');
+Route::post('/posts/update', [BlogPostController::class, 'update'])->name('posts.update')->middleware('CheckRole:admin');
+Route::get('/posts/view/{id}', [BlogPostController::class, 'view'])->name('posts.view')->middleware('CheckRole:admin');
 
-Route::delete('/posts/{id}', [BlogPostController::class, 'destroy'])->name('posts.destroy')->middleware('CheckRole:admin');
-=======
+Route::get('/posts/{id}', [BlogPostController::class, 'destroy'])->name('posts.destroy')->middleware('CheckRole:admin');
 Route::get('/blog/posts/{id}', [BlogPostController::class, 'show'])->name('blog.posts.show');
 
-Route::get('/blog/posts/{id}/edit', [BlogPostController::class, 'edit'])->name('blog.posts.edit')->middleware('CheckRole:admin');
 
 Route::put('/blog/posts/{id}', [BlogPostController::class, 'update'])->name('blog.posts.update')->middleware('CheckRole:admin');
 
 Route::delete('/blog/posts/{id}', [BlogPostController::class, 'destroy'])->name('blog.posts.destroy')->middleware('CheckRole:admin');
->>>>>>> 3467aa6ac5937c2165236fe44cceace704a321a5

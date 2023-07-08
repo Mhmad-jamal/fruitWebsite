@@ -46,7 +46,7 @@
                           <i class="bx bx-dots-vertical-rounded"></i>
                         </button>
                         <div class="dropdown-menu">
-                          <a class="dropdown-item" href="{{route('product.details', ['id' => $product->id])}}"><i class="bx bx-trash me-1"></i> View</a>
+                          <a class="dropdown-item" href="{{route('product.details', ['id' => $product->id])}}"><i class="bx bx-show"></i> View</a>
                           <a class="dropdown-item" href="{{ route('product.edit', ['id' => $product->id])}}"><i class="bx bx-edit-alt me-1"></i> Edit</a>
                            <a class="dropdown-item" href="{{route('product.delete', ['id' => $product->id])}}"><i class="bx bx-trash me-1"></i> Delete</a>
                          </div>

@@ -16,15 +16,15 @@
             <div class="row mb-3">
                 <div class="col-md-12">
                     <div class="circle-container d-flex justify-content-start">
-                        <h1 class="display- font-weight-bold">Contact Us</h1>
+                        <h1 class="display- font-weight-bold" id="title">Contact Us</h1>
                     </div>
                 </div>
             </div>
             <form action="{{route('contact.create')}}" method="POST">
 @csrf
-            <div class="col-sm-12 p-3" id="leftcol">
+            <div class="col-sm-12 " id="leftcol">
                 <div class="row" id="ContainerRow" >
-                    <div class="col-md-8">
+                    <div class="col-md-8 p-3">
                         <h1 class="text-white" style="padding: 19px;">
                             Drop a Message
                         </h1>

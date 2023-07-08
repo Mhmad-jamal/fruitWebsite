@@ -106,6 +106,9 @@
                             <a class="nav-link {{ Request::is('Delivery') ? 'active' : '' }}" href="{{route('Delivery')}}">Delivery</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link {{ Request::is('Contact') ? 'active' : '' }}" href="{{route('Contact')}}">Contact us</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('about')}}">About</a>
                         </li>
                         
@@ -114,7 +117,7 @@
                         <li class="nav-item">
                             <a href="{{route('Allcart')}}">
                                 <i id="shopingIcon" class="fas fa-shopping-cart fa-lg mr-2 " style="color: #8b48e5;font-size: 35px;
-                                margin-left: 200px;
+                                margin-left: 150px;
                                 margin-top: 1.7rem;"></i>
                                 </a>
                         </li>      

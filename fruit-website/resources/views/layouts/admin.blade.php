@@ -144,7 +144,7 @@
               </li>
               <li class="menu-item">
                 <a href="{{route('order.get')}}" class="menu-link">
-                  <i class="menu-icon tf-icons bx bx-table"></i>
+                  <i class="menu-icon tf-icons bx bx-basket"></i>
                   <div data-i18n="Tables">Orders</div>
                 </a>
               </li>
@@ -166,6 +166,25 @@
                     </a>
                   </li>
                 
+                </ul>
+              </li>
+               
+              <li class="menu-item" style="">
+                <a href="javascript:void(0)" class="menu-link menu-toggle">
+                  <i class="menu-icon tf-icons bx bx-copy"></i>
+                  <div data-i18n="Extended UI">Article</div>
+                </a>
+                <ul class="menu-sub">
+                  <li class="menu-item">
+                    <a href="{{route('posts.create')}}" class="menu-link">
+                      <div data-i18n="Perfect Scrollbar">Add New Article</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="{{route('blog.posts.index')}}" class="menu-link">
+                      <div data-i18n="Text Divider">All Article</div>
+                    </a>
+                  </li>
                 </ul>
               </li>
             </ul>
